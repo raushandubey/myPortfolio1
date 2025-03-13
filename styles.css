@@ -147,11 +147,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; /* Removes tap highlight on mobile */
 }
 
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    font-size: 16px; /* Base font size */
 }
 
 body {
@@ -160,6 +162,9 @@ body {
     color: var(--dark-color);
     background-color: var(--light-color);
     overflow-x: hidden;
+    min-height: 100vh; /* Ensures full height on mobile */
+    width: 100%;
+    max-width: 100vw; /* Prevents horizontal scrolling */
 }
 
 a {
@@ -977,7 +982,7 @@ footer {
     gap: 0.5rem;
 }
 
-/* Responsive Design */
+/* Media Queries for Better Responsiveness */
 @media screen and (max-width: 1024px) {
     .hero-content h1 {
         font-size: 3rem;
@@ -1094,6 +1099,45 @@ footer {
         max-width: 400px;
         margin: 0 auto;
     }
+    
+    /* Increase touch target sizes for better mobile experience */
+    .btn {
+        padding: 0.8rem 1.8rem;
+        min-height: 44px; /* Minimum touch target height */
+    }
+    
+    .social-link {
+        margin: 0 10px;
+        height: 44px;
+        width: 44px;
+        line-height: 44px;
+    }
+    
+    /* Improve form elements for touch input */
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 16px; /* Prevents iOS zoom on focus */
+    }
+    
+    /* Adjust navigation for mobile */
+    .nav-menu {
+        padding-top: 15px;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+    }
+    
+    /* Improve project cards layout */
+    .project-card {
+        margin-bottom: 25px;
+    }
+    
+    /* Better spacing for contact section */
+    .contact-item {
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -1120,5 +1164,148 @@ footer {
     
     .project-links .btn {
         width: 100%;
+    }
+    
+    html {
+        font-size: 14px; /* Slightly reduce base font size for very small screens */
+    }
+    
+    .container {
+        width: 95%; /* Use more screen space on small devices */
+        padding: 0 10px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    /* Adjust hero section for very small screens */
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    /* Stack buttons on very small screens */
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn {
+        margin: 5px 0;
+        width: 100%;
+    }
+    
+    /* Adjust project card layout */
+    .project-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-tech span {
+        font-size: 0.75rem;
+        padding: 3px 8px;
+        margin: 2px;
+    }
+}
+
+/* Additional media queries for specific device sizes */
+@media screen and (max-width: 480px) {
+    /* For extra small phones */
+    .about-text h3, 
+    .skill-category h4 {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-content h4 {
+        font-size: 0.9rem;
+    }
+    
+    /* Reduce padding for sections */
+    section {
+        padding: 3rem 0;
+    }
+    
+    /* Make images fit better on very small screens */
+    .project-image {
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    /* For very small phones */
+    html {
+        font-size: 13px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.1rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    
+    /* Further reduce padding */
+    .container {
+        padding: 0 8px;
+    }
+    
+    /* Slim down buttons */
+    .btn {
+        padding: 0.7rem 1.5rem;
+    }
+    
+    /* Improve form usability on tiny screens */
+    .form-group label {
+        font-size: 0.9rem;
+    }
+}
+
+/* Orientation-specific adjustments */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    /* Adjustments for landscape phones */
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .hero-content {
+        padding-top: 1rem;
+    }
+    
+    /* Adjust timeline for landscape */
+    .timeline-item {
+        padding: 10px 30px;
+    }
+    
+    /* Make contact form more compact in landscape */
+    .contact-content {
+        gap: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 10px;
+    }
+}
+
+/* Safe area insets for notched phones */
+@supports (padding: max(0px)) {
+    .container {
+        padding-left: max(15px, env(safe-area-inset-left));
+        padding-right: max(15px, env(safe-area-inset-right));
+    }
+    
+    body {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
     }
 } 
