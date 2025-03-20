@@ -292,6 +292,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
     font-size: 16px; /* Base font size */
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
 }
 
 body {
@@ -360,6 +361,10 @@ section {
     cursor: pointer;
     transition: var(--transition);
     text-align: center;
+    -webkit-tap-highlight-color: transparent; /* Remove default touch highlight */
+    touch-action: manipulation; /* Optimize for touch */
+    min-height: 44px; /* Apple's recommended minimum touch target size */
+    min-width: 44px;
 }
 
 .primary-btn {
@@ -1058,6 +1063,10 @@ nav {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent; /* Remove default touch highlight */
+    touch-action: manipulation; /* Optimize for touch */
+    min-height: 44px; /* Apple's recommended minimum touch target size */
+    min-width: 44px;
 }
 
 .social-link::after {
@@ -1072,20 +1081,7 @@ nav {
 
 .social-link:hover {
     transform: translateY(-5px) scale(1.1);
-}
-
-.social-link:hover::after {
-    opacity: 1;
-}
-
-/* LeetCode Social Link */
-.leetcode-link {
-    background-color: #0a0a23; /* LeetCode dark blue color */
-}
-
-.leetcode-link:hover {
-    background-color: #1a1a4e; /* Slightly lighter blue on hover */
-    box-shadow: 0 0 10px rgba(10, 10, 35, 0.7);
+    animation: bounce 1s infinite;
 }
 
 .contact-form {
@@ -1114,6 +1110,7 @@ nav {
     font-family: inherit;
     transition: all 0.3s ease;
     transform-origin: left top;
+    font-size: 16px; /* Prevent zoom on focus */
 }
 
 .form-group input:focus,
@@ -1128,6 +1125,10 @@ button[type="submit"] {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     overflow: hidden;
     position: relative;
+    -webkit-tap-highlight-color: transparent; /* Remove default touch highlight */
+    touch-action: manipulation; /* Optimize for touch */
+    min-height: 44px; /* Apple's recommended minimum touch target size */
+    min-width: 44px;
 }
 
 button[type="submit"]::after {
@@ -2148,40 +2149,133 @@ a:hover ~ .custom-cursor {
     animation: drawLine 2s ease-in-out forwards;
 }
 
+/* Additional mobile and iOS optimizations */
 
-/* Loading bar animation for skills */
-.skill-progress {
-    height: 6px;
-    background: rgba(74, 108, 247, 0.1);
-    border-radius: 3px;
-    margin-top: 5px;
-    overflow: hidden;
-    position: relative;
+/* Improve touch targets for better mobile experience */
+.nav-link, .btn, .social-link, .project-card a, input[type="submit"] {
+    -webkit-tap-highlight-color: transparent; /* Remove default touch highlight */
+    touch-action: manipulation; /* Optimize for touch */
+    min-height: 44px; /* Apple's recommended minimum touch target size */
+    min-width: 44px;
 }
 
-.skill-progress-bar {
-    height: 100%;
-    width: 0;
-    background: var(--primary-color);
-    transition: width 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-radius: 3px;
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Fix smooth scrolling behavior for iOS */
+html {
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    scroll-behavior: smooth;
 }
 
-.skill-progress-bar.animate {
-    width: var(--progress, 0%);
+/* Fix for iOS momentum scrolling in overflow containers */
+.project-gallery, .skills-container, .timeline {
+    -webkit-overflow-scrolling: touch;
 }
 
-/* Skill container animations */
-.skill-category {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease-out;
+/* Enhancements for iOS device sizes */
+@supports (-webkit-touch-callout: none) {
+    /* iOS-specific styles */
+    body {
+        /* Prevent rubber-band scrolling effect */
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+    
+    /* Fix for iOS form elements */
+    input, textarea, select {
+        font-size: 16px; /* Prevent zoom on focus */
+        border-radius: 0; /* Remove rounded corners */
+        -webkit-appearance: none; /* Remove default styling */
+    }
+    
+    /* Improve scrolling on iOS */
+    .project-gallery, .timeline {
+        scroll-snap-type: x mandatory;
+    }
+    
+    .project-card, .timeline-item {
+        scroll-snap-align: start;
+    }
 }
 
-.skill-category.animate {
-    opacity: 1;
-    transform: translateY(0);
-} 
+/* Improved media queries for better device coverage */
+@media screen and (max-width: 428px) {
+    /* iPhone 13 Pro Max width */
+    .container {
+        padding: 0 12px;
+    }
+    
+    nav {
+        padding: 15px 0;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Adjust spacing for small screens */
+    .section-title {
+        margin-bottom: 1.5rem;
+    }
+    
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Better project display on mobile */
+    .project-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Adjust timeline for very small screens */
+    .timeline-dot {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    /* iPhone 13/14 width */
+    html {
+        font-size: 14px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    /* Further reduce padding */
+    section {
+        padding: 2.5rem 0;
+    }
+    
+    /* Make form elements full width */
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+    }
+}
+
+/* Fix for notched devices in landscape */
+@media screen and (orientation: landscape) and (max-height: 428px) {
+    .hero {
+        min-height: 428px;
+        height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    }
+    
+    .hero-content {
+        padding: 1rem 0;
+    }
+    
+    /* Adjust project layout in landscape */
+    .project-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
