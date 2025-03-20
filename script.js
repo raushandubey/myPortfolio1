@@ -43,59 +43,59 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Mobile Menu Initialization
 function initMobileMenu() {
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
-    
+const mobileMenu = document.getElementById('mobile-menu');
+const navMenu = document.querySelector('.nav-menu');
+
     if (mobileMenu && navMenu) {
-        mobileMenu.addEventListener('click', function() {
-            mobileMenu.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking on a nav link
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
+    mobileMenu.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+// Close mobile menu when clicking on a nav link
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
     }
 }
 
 // Scroll Animations Initialization
 function initScrollAnimations() {
-    // Header scroll effect
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-    
-    // Active navigation link based on scroll position
+// Header scroll effect
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// Active navigation link based on scroll position
     const navLinks = document.querySelectorAll('.nav-link');
     const pageSections = document.querySelectorAll('section');
     
-    window.addEventListener('scroll', () => {
-        let current = '';
+window.addEventListener('scroll', () => {
+    let current = '';
         pageSections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active');
-            }
-        });
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
     });
-    
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+
     // Scroll reveal animations
     window.addEventListener('scroll', reveal);
     window.addEventListener('scroll', animateOnScroll);
@@ -362,7 +362,7 @@ function initForm() {
                 form.reset();
                 
                 // Reset button after 3 seconds
-                setTimeout(() => {
+    setTimeout(() => {
                     button.innerHTML = originalText;
                     button.disabled = false;
                     button.classList.remove('success');
