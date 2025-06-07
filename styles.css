@@ -1,3 +1,30 @@
+/* Private */
+.fa-lock {
+    margin-left: 8px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.private-note {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.private-project-badge {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.private-project-badge i {
+    margin-right: 6px;
+}
+
+
 /* Animations and Keyframes */
 @keyframes fadeInUp {
     from {
