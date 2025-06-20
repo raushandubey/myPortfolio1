@@ -72,18 +72,27 @@ This template is compatible with all modern browsers including:
 3. Edit the files to customize the content for your needs
 4. Deploy to your preferred hosting service
 
-## Deployment
+## Deployment & Design  by Raushan Dubey
+
+This portfolio template has been significantly enhanced and customized by **Raushan Dubey**. Key improvements include:
+
+- **Modernized UI/UX**: Updated color schemes, fonts, and layout for a more professional and appealing look.
+- **Enhanced Responsiveness**: Improved mobile and tablet experience with refined breakpoints and flexible grids.
+- **Project Section Revamp**: Added new projects, private project badges, and FontAwesome icons for better clarity.
+- **Accessibility Improvements**: Better contrast, alt text for images, and keyboard navigation support.
+- **Performance Optimizations**: Minified assets and optimized images for faster load times.
+- **Deployment Ready**: Easily deployable to platforms like GitHub Pages, Netlify, Vercel, or Firebase Hosting.
+
+### How to Deploy
 
 You can deploy this website to any static site hosting service such as:
-- GitHub Pages
-- Netlify
-- Vercel
-- Firebase Hosting
+- [GitHub Pages](https://pages.github.com/)
+- [Netlify](https://www.netlify.com/)
+- [Vercel](https://vercel.com/)
+- [Firebase Hosting](https://firebase.google.com/products/hosting)
 
-## License
-
-This project is open source and available under the MIT License.
+Just upload your project files or connect your repository to the platform of your choice.
 
 ---
 
-Feel free to use this template for your personal portfolio. If you have any questions or suggestions, please open an issue or submit a pull request. 
+Feel free to use and further customize this template. For questions or suggestions, please open an issue or submit a pull request.
