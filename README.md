@@ -91,13 +91,6 @@ You can deploy this website to any static site hosting service such as:
 - [Vercel](https://vercel.com/)
 - [Firebase Hosting](https://firebase.google.com/products/hosting)
 
-<<<<<<< HEAD
-Just upload your project files or connect your repository to the platform of your choice.
-
----
-
-Feel free to use and further customize this template. For questions or suggestions, please open an issue or submit a pull request.
-=======
 ## License
 design by Raushan Dubey
 This project is open source and available under the MIT License.
@@ -105,4 +98,3 @@ This project is open source and available under the MIT License.
 ---
 
 Feel free to use this template for your personal portfolio. If you have any questions or suggestions, please open an issue or submit a pull request. 
->>>>>>> 14d9f3ef2e5d38dd66d0bb2133f33eb948f7e9a9
