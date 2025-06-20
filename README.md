@@ -81,7 +81,7 @@ You can deploy this website to any static site hosting service such as:
 - Firebase Hosting
 
 ## License
-
+design by Raushan Dubey
 This project is open source and available under the MIT License.
 
 ---
