@@ -6,6 +6,7 @@
     <title>Professional Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 </head>
 <body>
     <div id="particles-js" class="particles"></div>
@@ -24,6 +25,7 @@
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#startups" class="nav-link">StartUps</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -409,6 +411,98 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+        
+        <!-- Add SVG drawing animation as section divider -->
+        <svg class="svg-drawing-animation" viewBox="0 0 1200 80" preserveAspectRatio="none">
+            <path d="M0,0 C300,60 900,60 1200,0 L1200,80 L0,80 Z" />
+        </svg>
+    </section>
+
+    <section id="startups" class="startups section-transition">
+        <div class="container">
+            <h2 class="section-title reveal text-reveal" data-scramble>StartUps</h2>
+            <div class="startups-content">
+                <div class="startup-intro reveal-left">
+                    <h3>Entrepreneurial Ventures</h3>
+                    <p>Innovative solutions created to address real-world challenges through technology and creativity.</p>
+                </div>
+                <div class="startups-grid">
+                    <!-- Bhaktinama Startup -->
+                    <div class="startup-card reveal-left hover-zoom" data-delay="0.1">
+                        <div class="startup-image">
+                            <p>
+                            <img src="assets/bhaktinama.png" alt="Bhaktinama">
+                        </div>
+                        <div class="startup-info">
+                            <h3>Bhaktinama</h3>
+                            <p>
+                                A comprehensive platform for spiritual services, connecting devotees with verified pandits for various puja ceremonies and religious rituals.
+                                <br>
+                                <strong>Work Done:</strong>
+                                <ul>
+                                    <li>Developed core backend APIs for booking and scheduling puja services.</li>
+                                    <li>Designed user interface for mobile and desktop platforms.</li>
+                                    <li>Integrated real-time calendar and notification features.</li>
+                                    <li>Built admin dashboard for pandit verification and management.</li>
+                                </ul>
+                                <span class="status-badge" style="display:inline-block; margin-top:8px; background:#ffe0b2; color:#b26a00; padding:4px 10px; border-radius:4px;">
+                                    <i class="fas fa-hourglass-half"></i> Not Ready to Launch
+                                </span>
+                            </p>
+                            <div class="startup-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-pray"></i>
+                                    <span>Multiple Puja Types</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Real-time Scheduling</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-user-check"></i>
+                                    <span>Verified Pandits</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Mobile Optimized</span>
+                                </div>
+                            </div>
+                            <div class="startup-tech">
+                                <span>Laravel</span>
+                                <span>PHP</span>
+                                <span>HTML5</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>MySQL</span>
+                                <span>blade</span>
+                            </div>
+                            <div class="startup-links">
+                                <!-- <a href="https://github.com/raushandubey/bhaktinama" class="btn small-btn"><i class="fab fa-github"></i> Repository</a> -->
+                                <a href="#" class="btn small-btn primary-btn disabled" style="pointer-events:none;opacity:0.6;"><i class="fas fa-external-link-alt"></i> Coming Soon</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Additional Startup Card (Placeholder) -->
+                    <div class="startup-card reveal-right hover-zoom" data-delay="0.2">
+                        <div class="startup-image">
+                            <img src="assets/project-3.png" alt="Future Startup">
+                        </div>
+                        <div class="startup-info">
+                            <h3>Coming Soon</h3>
+                            <p>Our next innovative venture is currently in development. Stay tuned for updates on this exciting new project.</p>
+                            <div class="startup-tech">
+                                <span>Next.js</span>
+                                <span>TypeScript</span>
+                                <span>AWS</span>
+                            </div>
+                            <div class="startup-status">
+                                <span class="status-badge"><i class="fas fa-code-branch"></i> In Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         

@@ -720,4 +720,25 @@ function initSVGAnimations() {
     svgElements.forEach(svg => {
         svgObserver.observe(svg);
     });
-} 
+}
+
+// Initialize StartUps section animations
+function initStartupsAnimations() {
+    const startupCards = document.querySelectorAll('.startup-card');
+    
+    startupCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.classList.add('active');
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('active');
+        });
+    });
+    
+    // Animate feature items
+    const featureItems = document.querySelectorAll('.feature-item');
+    featureItems.forEach((item, index) => {
+        item.style.animationDelay = `${0.1 * index}s`;
+    });
+}

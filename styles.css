@@ -1304,6 +1304,156 @@ footer {
     gap: 0.5rem;
 }
 
+/* StartUps Section Styles */
+.startups {
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.startups-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.startup-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.startup-intro h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.startups-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.startup-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.startup-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.startup-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.startup-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.startup-card:hover .startup-image img {
+    transform: scale(1.05);
+}
+
+.startup-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.startup-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark-color);
+}
+
+.startup-info p {
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    flex-grow: 1;
+}
+
+.startup-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-item i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.startup-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.startup-tech span {
+    background-color: rgba(74, 108, 247, 0.1);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.startup-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.startup-status {
+    margin-top: auto;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.status-badge i {
+    margin-right: 0.5rem;
+}
+
+/* Responsive styles for StartUps section */
+@media (max-width: 768px) {
+    .startups-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .startup-features {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Media Queries for Better Responsiveness */
 @media screen and (max-width: 1024px) {
     .hero-content h1 {
