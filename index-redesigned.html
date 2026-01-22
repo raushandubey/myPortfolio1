@@ -576,4 +576,601 @@
     <script src="script.js"></script>
     <script src="animations.js"></script>
 </body>
-</html> {% endcomment %}
+</html> {% endcomment %}<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raushan Dubey - Production Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="nav-system">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">RD</span>
+                <span class="logo-bracket">]</span>
+                <span class="logo-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">LIVE</span>
+                </span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#production">Production</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO: PRODUCTION SYSTEM -->
+    <section id="production" class="hero-production">
+        <div class="production-grid">
+            <!-- LEFT: SYSTEM STATUS -->
+            <div class="system-panel">
+                <div class="panel-header">
+                    <span class="panel-title">PRODUCTION SYSTEM</span>
+                    <span class="panel-time" id="uptime">00:00:00</span>
+                </div>
+                
+                <div class="system-name">
+                    <h1>Bhaktinama.com</h1>
+                    <p class="system-tagline">Live spiritual platform serving real users</p>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="metric-data">
+                            <div class="metric-value" data-target="99.9">0</div>
+                            <div class="metric-label">% Uptime</div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="metric-data">
+                            <div class="metric-value" data-target="1000">0</div>
+                            <div class="metric-label">Active Users</div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="metric-data">
+                            <div class="metric-value" data-target="200">0</div>
+                            <div class="metric-label">ms Response</div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="metric-data">
+                            <div class="metric-value">0</div>
+                            <div class="metric-label">Downtime Days</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="system-actions">
+                    <a href="https://bhaktinama.com" target="_blank" class="btn-primary">
+                        <span>View Live System</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="#architecture" class="btn-secondary">
+                        <span>See Architecture</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+
+                <div class="engineer-intro">
+                    <p class="intro-text">Built by <strong>Raushan Dubey</strong></p>
+                    <p class="intro-subtitle">Production Engineer | Full-Stack Developer | Founder</p>
+                </div>
+            </div>
+
+            <!-- RIGHT: LIVE SYSTEM VISUALIZATION -->
+            <div class="system-visual">
+                <canvas id="productionCanvas"></canvas>
+                <div class="visual-overlay">
+                    <div class="status-row">
+                        <span class="status-indicator active"></span>
+                        <span class="status-label">API Gateway</span>
+                        <span class="status-value">200 OK</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-indicator active"></span>
+                        <span class="status-label">Database</span>
+                        <span class="status-value">Connected</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-indicator active"></span>
+                        <span class="status-label">Cache Layer</span>
+                        <span class="status-value">98% Hit Rate</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-indicator active"></span>
+                        <span class="status-label">CDN</span>
+                        <span class="status-value">Optimized</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-prompt">
+            <span>Scroll to explore system architecture</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ARCHITECTURE SECTION -->
+    <section id="architecture" class="architecture-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">SYSTEM DESIGN</span>
+                <h2>Production Architecture</h2>
+                <p>How Bhaktinama handles real traffic, real users, real scale</p>
+            </div>
+
+            <div class="arch-diagram">
+                <div class="arch-layer">
+                    <div class="layer-title">Frontend Layer</div>
+                    <div class="layer-components">
+                        <div class="component-card">
+                            <i class="fab fa-react"></i>
+                            <span>React.js</span>
+                        </div>
+                        <div class="component-card">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5/CSS3</span>
+                        </div>
+                        <div class="component-card">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector"></div>
+
+                <div class="arch-layer">
+                    <div class="layer-title">Backend Layer</div>
+                    <div class="layer-components">
+                        <div class="component-card">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="component-card">
+                            <i class="fab fa-laravel"></i>
+                            <span>Laravel</span>
+                        </div>
+                        <div class="component-card">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector"></div>
+
+                <div class="arch-layer">
+                    <div class="layer-title">Data Layer</div>
+                    <div class="layer-components">
+                        <div class="component-card">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="component-card">
+                            <i class="fas fa-leaf"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="component-card">
+                            <i class="fas fa-bolt"></i>
+                            <span>Redis Cache</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-stack-grid">
+                <div class="stack-category">
+                    <h4>Languages</h4>
+                    <div class="stack-items">
+                        <span class="stack-badge">JavaScript</span>
+                        <span class="stack-badge">Python</span>
+                        <span class="stack-badge">Java</span>
+                        <span class="stack-badge">C++</span>
+                        <span class="stack-badge">PHP</span>
+                    </div>
+                </div>
+                <div class="stack-category">
+                    <h4>Frameworks</h4>
+                    <div class="stack-items">
+                        <span class="stack-badge">React.js</span>
+                        <span class="stack-badge">Node.js</span>
+                        <span class="stack-badge">Laravel</span>
+                        <span class="stack-badge">Flutter</span>
+                    </div>
+                </div>
+                <div class="stack-category">
+                    <h4>Infrastructure</h4>
+                    <div class="stack-items">
+                        <span class="stack-badge">MySQL</span>
+                        <span class="stack-badge">MongoDB</span>
+                        <span class="stack-badge">Git</span>
+                        <span class="stack-badge">REST APIs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE TIMELINE -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">PRODUCTION HISTORY</span>
+                <h2>Where I've Shipped Code</h2>
+                <p>Real companies, real codebases, real impact</p>
+            </div>
+
+            <div class="experience-timeline">
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <h3>Trapigo</h3>
+                            <span class="exp-role">Software Developer Intern</span>
+                        </div>
+                        <div class="exp-period">
+                            <span class="period-badge current">Current</span>
+                            <span class="period-date">June 2025 - Present</span>
+                        </div>
+                    </div>
+                    <div class="exp-content">
+                        <ul class="exp-highlights">
+                            <li><strong>Backend:</strong> Laravel, PHP, MySQL production services</li>
+                            <li><strong>Frontend:</strong> Responsive interfaces with HTML5, CSS, JavaScript</li>
+                            <li><strong>Mobile:</strong> Flutter app development</li>
+                            <li><strong>Lifecycle:</strong> Full SDLC from concept to deployment</li>
+                        </ul>
+                        <div class="exp-proof">
+                            <a href="#" class="proof-link"><i class="fas fa-certificate"></i> Certificate</a>
+                            <a href="#" class="proof-link"><i class="fas fa-file-alt"></i> Offer Letter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <h3>Ceeras</h3>
+                            <span class="exp-role">Frontend Developer Intern</span>
+                        </div>
+                        <div class="exp-period">
+                            <span class="period-badge current">Current</span>
+                            <span class="period-date">Mar 2024 - Present</span>
+                        </div>
+                    </div>
+                    <div class="exp-content">
+                        <ul class="exp-highlights">
+                            <li><strong>UI Development:</strong> Modern JavaScript frameworks</li>
+                            <li><strong>Integration:</strong> Backend API services</li>
+                            <li><strong>Performance:</strong> Optimization techniques for UX</li>
+                        </ul>
+                        <div class="exp-proof">
+                            <a href="https://drive.google.com/file/d/1L7DbeAJBtbeUUYR3qTzJLj4BxCDZQ9aW/view?usp=drivesdk" class="proof-link" target="_blank"><i class="fas fa-certificate"></i> Certificate</a>
+                            <a href="https://drive.google.com/file/d/1MU-I0VlGqGdiBpyQRD0fqws8Fvi9yS9R/view?usp=drivesdk" class="proof-link" target="_blank"><i class="fas fa-file-alt"></i> Offer Letter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <h3>Bluestock Fintech</h3>
+                            <span class="exp-role">SDE Intern</span>
+                        </div>
+                        <div class="exp-period">
+                            <span class="period-badge completed">Completed</span>
+                            <span class="period-date">Feb 2025 - Mar 2025</span>
+                        </div>
+                    </div>
+                    <div class="exp-content">
+                        <ul class="exp-highlights">
+                            <li><strong>Fintech:</strong> Financial technology solutions</li>
+                            <li><strong>Security:</strong> Authentication & data protection</li>
+                            <li><strong>APIs:</strong> RESTful client-server communication</li>
+                            <li><strong>Visualization:</strong> Financial analytics components</li>
+                        </ul>
+                        <div class="exp-proof">
+                            <a href="https://drive.google.com/file/d/1oar5tWX6qPx25k8NYAnJA6zL0qHSnxsM/view?usp=drive_link" class="proof-link" target="_blank"><i class="fas fa-certificate"></i> Certificate</a>
+                            <a href="https://drive.google.com/file/d/1QB596Eg2APagJcmenRxZeJIHLqaSi9oM/view?usp=drivesdk" class="proof-link" target="_blank"><i class="fas fa-file-alt"></i> Offer Letter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEARNING JOURNEY (Projects) -->
+    <section id="journey" class="journey-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">LEARNING PATH</span>
+                <h2>How I Built My Skills</h2>
+                <p>From tutorials to production - every project taught me something</p>
+            </div>
+
+            <div class="journey-grid">
+                <!-- Production Projects -->
+                <div class="journey-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-rocket"></i>
+                        Production Systems
+                    </h3>
+                    
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <h4>Bhaktinama Platform</h4>
+                            <span class="project-status live">LIVE</span>
+                        </div>
+                        <p class="project-desc">Full-stack spiritual platform with user authentication, content management, and real-time features. Serving real users with 99.9% uptime.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MySQL</span>
+                            <span>Laravel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://bhaktinama.com" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Site
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Healthcare Product System</h4>
+                            <span class="project-status client">CLIENT</span>
+                        </div>
+                        <p class="project-desc">Enterprise healthcare management system with inventory tracking, order processing, and analytics dashboard. Production deployment for real client.</p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>API Integration</span>
+                            <span>Maps API</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-confidential">
+                                <i class="fas fa-shield-alt"></i> Client Confidential
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Projects -->
+                <div class="journey-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Skill-Building Projects
+                    </h3>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Healthcare Scheduler</h4>
+                            <span class="project-status collab">IBM COLLAB</span>
+                        </div>
+                        <p class="project-desc">Appointment scheduling system with patient registration, doctor availability, automated reminders. Built in collaboration with IBM.</p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>IBM Cloud</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/raushandubey" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://heath-schedular.netlify.app/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Advanced Weather App</h4>
+                            <span class="project-status learning">MOBILE</span>
+                        </div>
+                        <p class="project-desc">Cross-platform weather application with real-time forecasts, personalized alerts, and location-based notifications.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>C++</span>
+                            <span>Swift</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/raushandubey/Adv_Weather_Application" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>AI Calculator</h4>
+                            <span class="project-status learning">AI/ML</span>
+                        </div>
+                        <p class="project-desc">Natural language processing calculator with voice recognition and step-by-step solution explanations.</p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>AI API</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/raushandubey/Ai-cal" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://aicalculo.netlify.app/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Dubey GPT Discord Bot</h4>
+                            <span class="project-status learning">AI</span>
+                        </div>
+                        <p class="project-desc">AI-powered Discord bot using TensorFlow for content generation based on user prompts.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/raushandubey" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tutorial Projects -->
+                <div class="journey-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-book"></i>
+                        Tutorial Implementations
+                    </h3>
+                    <p class="category-note">These projects helped me learn core concepts and patterns</p>
+                    
+                    <div class="tutorial-grid">
+                        <div class="tutorial-card">
+                            <h5>E-Commerce Platform</h5>
+                            <p>Full-stack shopping experience with payment integration</p>
+                            <div class="tutorial-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <a href="https://ecomamazon.netlify.app/" target="_blank" class="tutorial-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+
+                        <div class="tutorial-card">
+                            <h5>Streaming Platform</h5>
+                            <p>Music streaming with Spotify API integration</p>
+                            <div class="tutorial-tech">
+                                <span>React.js</span>
+                                <span>Spotify API</span>
+                            </div>
+                            <a href="https://spoti.netlify.app/" target="_blank" class="tutorial-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+
+                        <div class="tutorial-card">
+                            <h5>Video Platform</h5>
+                            <p>Netflix-style interface with TMDB API</p>
+                            <div class="tutorial-tech">
+                                <span>React.js</span>
+                                <span>Firebase</span>
+                            </div>
+                            <a href="https://zingy-kheer-d8ef04.netlify.app/" target="_blank" class="tutorial-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Let's Build Something</h2>
+                    <p class="contact-subtitle">Looking for engineers who ship to production? Let's talk.</p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:your.email@example.com" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>your.email@example.com</span>
+                        </a>
+                        <a href="https://github.com/raushandubey" target="_blank" class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/raushandubey</span>
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-cta">
+                        <a href="assets/MyCV Resume.pdf" download class="btn-primary">
+                            <i class="fas fa-download"></i>
+                            <span>Download Resume</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Raushan Dubey. Built with production in mind.</p>
+                <div class="footer-status">
+                    <span class="status-dot"></span>
+                    <span>All systems operational</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
