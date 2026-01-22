@@ -1,330 +1,244 @@
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raushan Dubey - Production Engineer</title>
-    <link rel="stylesheet" href="styles-redesigned.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 </head>
 <body>
-    <!-- NAVIGATION -->
-    <nav class="nav-system">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-bracket">[</span>
-                <span class="logo-text">RD</span>
-                <span class="logo-bracket">]</span>
-                <span class="logo-status">
-                    <span class="status-dot"></span>
-                    <span class="status-text">LIVE</span>
-                </span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#production">Production</a></li>
-                <li><a href="#architecture">Architecture</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#journey">Journey</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HERO: PRODUCTION SYSTEM -->
-    <section id="production" class="hero-production">
-        <div class="production-grid">
-            <!-- LEFT: SYSTEM STATUS -->
-            <div class="system-panel">
-                <div class="panel-header">
-                    <span class="panel-title">PRODUCTION SYSTEM</span>
-                    <span class="panel-time" id="uptime">00:00:00</span>
-                </div>
-                
-                <div class="system-name">
-                    <h1>Bhaktinama.com</h1>
-                    <p class="system-tagline">Live spiritual platform serving real users</p>
-                </div>
-
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <div class="metric-icon">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <div class="metric-data">
-                            <div class="metric-value" data-target="99.9">0</div>
-                            <div class="metric-label">% Uptime</div>
-                        </div>
-                    </div>
-                    
-                    <div class="metric-card">
-                        <div class="metric-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="metric-data">
-                            <div class="metric-value" data-target="1000">0</div>
-                            <div class="metric-label">Active Users</div>
-                        </div>
-                    </div>
-                    
-                    <div class="metric-card">
-                        <div class="metric-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <div class="metric-data">
-                            <div class="metric-value" data-target="200">0</div>
-                            <div class="metric-label">ms Response</div>
-                        </div>
-                    </div>
-                    
-                    <div class="metric-card">
-                        <div class="metric-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="metric-data">
-                            <div class="metric-value">0</div>
-                            <div class="metric-label">Downtime Days</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="system-actions">
-                    <a href="https://bhaktinama.com" target="_blank" class="btn-primary">
-                        <span>View Live System</span>
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a href="#architecture" class="btn-secondary">
-                        <span>See Architecture</span>
-                        <i class="fas fa-arrow-down"></i>
-                    </a>
-                </div>
-
-                <div class="engineer-intro">
-                    <p class="intro-text">Built by <strong>Raushan Dubey</strong></p>
-                    <p class="intro-subtitle">Production Engineer | Full-Stack Developer | Founder</p>
-                </div>
-            </div>
-
-            <!-- RIGHT: LIVE SYSTEM VISUALIZATION -->
-            <div class="system-visual">
-                <canvas id="productionCanvas"></canvas>
-                <div class="visual-overlay">
-                    <div class="status-row">
-                        <span class="status-indicator active"></span>
-                        <span class="status-label">API Gateway</span>
-                        <span class="status-value">200 OK</span>
-                    </div>
-                    <div class="status-row">
-                        <span class="status-indicator active"></span>
-                        <span class="status-label">Database</span>
-                        <span class="status-value">Connected</span>
-                    </div>
-                    <div class="status-row">
-                        <span class="status-indicator active"></span>
-                        <span class="status-label">Cache Layer</span>
-                        <span class="status-value">98% Hit Rate</span>
-                    </div>
-                    <div class="status-row">
-                        <span class="status-indicator active"></span>
-                        <span class="status-label">CDN</span>
-                        <span class="status-value">Optimized</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="scroll-prompt">
-            <span>Scroll to explore system architecture</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
-
-    <!-- ARCHITECTURE SECTION -->
-    <section id="architecture" class="architecture-section">
+    <div id="particles-js" class="particles"></div>
+    
+    <header>
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">SYSTEM DESIGN</span>
-                <h2>Production Architecture</h2>
-                <p>How Bhaktinama handles real traffic, real users, real scale</p>
-            </div>
-
-            <div class="arch-diagram">
-                <div class="arch-layer">
-                    <div class="layer-title">Frontend Layer</div>
-                    <div class="layer-components">
-                        <div class="component-card">
-                            <i class="fab fa-react"></i>
-                            <span>React.js</span>
-                        </div>
-                        <div class="component-card">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5/CSS3</span>
-                        </div>
-                        <div class="component-card">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
+            <nav>
+                <div class="logo">Portfolio</div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#startups" class="nav-link">StartUps</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-                <div class="arch-connector"></div>
-
-                <div class="arch-layer">
-                    <div class="layer-title">Backend Layer</div>
-                    <div class="layer-components">
-                        <div class="component-card">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="component-card">
-                            <i class="fab fa-laravel"></i>
-                            <span>Laravel</span>
-                        </div>
-                        <div class="component-card">
-                            <i class="fab fa-php"></i>
-                            <span>PHP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="arch-connector"></div>
-
-                <div class="arch-layer">
-                    <div class="layer-title">Data Layer</div>
-                    <div class="layer-components">
-                        <div class="component-card">
-                            <i class="fas fa-database"></i>
-                            <span>MySQL</span>
-                        </div>
-                        <div class="component-card">
-                            <i class="fas fa-leaf"></i>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="component-card">
-                            <i class="fas fa-bolt"></i>
-                            <span>Redis Cache</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tech-stack-grid">
-                <div class="stack-category">
-                    <h4>Languages</h4>
-                    <div class="stack-items">
-                        <span class="stack-badge">JavaScript</span>
-                        <span class="stack-badge">Python</span>
-                        <span class="stack-badge">Java</span>
-                        <span class="stack-badge">C++</span>
-                        <span class="stack-badge">PHP</span>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h4>Frameworks</h4>
-                    <div class="stack-items">
-                        <span class="stack-badge">React.js</span>
-                        <span class="stack-badge">Node.js</span>
-                        <span class="stack-badge">Laravel</span>
-                        <span class="stack-badge">Flutter</span>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h4>Infrastructure</h4>
-                    <div class="stack-items">
-                        <span class="stack-badge">MySQL</span>
-                        <span class="stack-badge">MongoDB</span>
-                        <span class="stack-badge">Git</span>
-                        <span class="stack-badge">REST APIs</span>
-                    </div>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="typewriter">Hello, I'm <br> Raushan Dubey </h1>
+                <h2>Software Development Engineer</h2>
+                <p>Passionate about creating innovative solutions through code</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary-btn">Contact Me</a>
+                    <a href="#projects" class="btn secondary-btn">View My Work</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EXPERIENCE TIMELINE -->
-    <section id="experience" class="experience-section">
+    <section id="about" class="about section-transition">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">PRODUCTION HISTORY</span>
-                <h2>Where I've Shipped Code</h2>
-                <p>Real companies, real codebases, real impact</p>
+            <h2 class="section-title reveal text-reveal">About Me</h2>
+            <div class="about-content">
+                <div class="about-image float reveal-left hover-zoom">
+                    <img src="assets/Raushan Dubey.jpg" alt="Profile Picture">
+                </div>
+                <div class="about-text reveal-right">
+                    <p>I am a passionate software developer with experience in building web applications and solving complex problems. My journey in technology has equipped me with a diverse skill set and a keen eye for detail.</p>
+                    
+                    <!-- Add CV Download Button -->
+                    <div class="cv-download">
+                        <a href="assets\MyCV Resume.pdf" download class="btn primary-btn cv-btn glow btn-3d">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
+                    
+                    <h3 class="text-reveal" data-scramble>Skills</h3>
+                    <div class="skills-container">
+                        <div class="skill-category reveal-delay-1">
+                            <h4>Programming Languages</h4>
+                            <ul class="skills-list stagger-list">
+                                <li data-skill="JavaScript - 70%">JavaScript
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 90%"></div>
+                                    </div>
+                                </li>
+                                <li data-skill="Python - 80%">Python
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 85%"></div>
+                                    </div>
+                                </li>
+                                <li data-skill="Java - 85%">Java
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 80%"></div>
+                                    </div>
+                                </li>
+                                <li data-skill="C++ - 75%">C++
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 75%"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="skill-category reveal-delay-2">
+                            <h4>Web Technologies</h4>
+                            <ul class="skills-list stagger-list">
+                                <li data-skill="HTML5 - 95%">HTML5
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 95%"></div>
+                                    </div>
+                                </li>
+                                <li data-skill="CSS3 - 90%">CSS3
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 90%"></div>
+                                    </div>
+                                </li>
+                                <li data-skill="React.js - 85%">React.js
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 85%"></div>
+                                    </div>
+                                </li>
+                                <li data-skill="Node.js - 80%">Node.js
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 80%"></div>
+                                    </div>
+                                </li>
+                                <li data-skill="CSS3 - 90%">Flutter
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 90%"></div>
+                                    </div>
+                                </li>
+                                <li data-skill="PHP Basic - 80%">PHP
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 80%"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="skill-category reveal-delay-3">
+                            <h4>Tools & Platforms</h4>
+                            <ul class="skills-list stagger-list">
+                                <li data-skill="Git - 90%">Git
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 90%"></div>
+                                    </div>
+                                </li>
+                                <li data-skill="Laravel - 85%">Laravel12
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 75%"></div>
+                                    </div>
+                                </li>
+                                <li data-skill="MySQL - 70%">MySQL
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 70%"></div>
+                                    </div>
+                                </li>
+                                <li data-skill="MongoDB - 85%">MongoDB
+                                    <span class="tooltip-arrow"></span>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress-bar" style="--progress: 85%"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        
+        <!-- Add SVG drawing animation as section divider -->
+        <svg class="svg-drawing-animation" viewBox="0 0 1200 80" preserveAspectRatio="none">
+            <path d="M0,0 C300,60 900,60 1200,0 L1200,80 L0,80 Z" />
+        </svg>
+    </section>
 
-            <div class="experience-timeline">
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <div class="exp-company">
-                            <h3>Trapigo</h3>
-                            <span class="exp-role">Software Developer Intern</span>
-                        </div>
-                        <div class="exp-period">
-                            <span class="period-badge current">Current</span>
-                            <span class="period-date">June 2025 - Present</span>
-                        </div>
-                    </div>
-                    <div class="exp-content">
-                        <ul class="exp-highlights">
-                            <li><strong>Backend:</strong> Laravel, PHP, MySQL production services</li>
-                            <li><strong>Frontend:</strong> Responsive interfaces with HTML5, CSS, JavaScript</li>
-                            <li><strong>Mobile:</strong> Flutter app development</li>
-                            <li><strong>Lifecycle:</strong> Full SDLC from concept to deployment</li>
+    <section id="experience" class="experience section-transition">
+        <div class="container">
+            <h2 class="section-title reveal text-reveal" data-scramble>Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal" data-delay="0.1">
+                    <div class="timeline-content">
+                        <h3>Software Developer Intern</h3>
+                        <h4>Gopal Narayan Singh University</h4>
+                        <p class="timeline-date">16 June 2025- Pursuing</p>
+                        <ul class="experience-details">
+                            <li>Developed applications using Laravel, PHP, and MySQL for backend services.</li>
+                            <li>Created responsive user interfaces with HTML5, CSS, and JavaScript.</li>
+                            <li>Contributed to mobile app development using Flutter.</li>
+                            <li>Participated in the full software development lifecycle, from concept to deployment.</li>
                         </ul>
-                        <div class="exp-proof">
-                            <a href="#" class="proof-link"><i class="fas fa-certificate"></i> Certificate</a>
-                            <a href="#" class="proof-link"><i class="fas fa-file-alt"></i> Offer Letter</a>
+                        <div class="certificate-link">
+                            <a href="https://drive.google.com/file/d/your-certificate-id" class="btn small-btn shimmer" target="_blank" rel="noopener">
+                                <i class="fas fa-certificate"></i> View Certificate
+                            </a>
+                            <a href="https://drive.google.com/file/d/1X8iy2zv7HJLLFOpQJGsGraITsehJb/view?usp=drivesdk " class="btn small-btn" target="_blank" rel="noopener">
+                                <i class="fas fa-file-alt"></i> View Offer Letter
+                            </a>
                         </div>
                     </div>
                 </div>
-
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <div class="exp-company">
-                            <h3>Ceeras</h3>
-                            <span class="exp-role">Frontend Developer Intern</span>
-                        </div>
-                        <div class="exp-period">
-                            <span class="period-badge current">Current</span>
-                            <span class="period-date">Mar 2024 - Present</span>
-                        </div>
-                    </div>
-                    <div class="exp-content">
-                        <ul class="exp-highlights">
-                            <li><strong>UI Development:</strong> Modern JavaScript frameworks</li>
-                            <li><strong>Integration:</strong> Backend API services</li>
-                            <li><strong>Performance:</strong> Optimization techniques for UX</li>
+                <div class="timeline-item reveal" data-delay="0.3">
+                    <div class="timeline-content">
+                        <h3>Frontend Developer Intern</h3>
+                        <h4>Ceeras</h4>
+                        <p class="timeline-date">20 Mar 2024 - Pursuing</p>
+                        <ul class="experience-details">
+                            <li>Developed responsive user interfaces using modern JavaScript frameworks</li>
+                            <li>Implemented UI components and features based on design specifications</li>
+                            <li>Collaborated with backend developers to integrate API services</li>
+                            <li>Improved website performance and user experience through optimization techniques</li>
                         </ul>
-                        <div class="exp-proof">
-                            <a href="https://drive.google.com/file/d/1L7DbeAJBtbeUUYR3qTzJLj4BxCDZQ9aW/view?usp=drivesdk" class="proof-link" target="_blank"><i class="fas fa-certificate"></i> Certificate</a>
-                            <a href="https://drive.google.com/file/d/1MU-I0VlGqGdiBpyQRD0fqws8Fvi9yS9R/view?usp=drivesdk" class="proof-link" target="_blank"><i class="fas fa-file-alt"></i> Offer Letter</a>
+                        <div class="certificate-link">
+                            <a href="https://drive.google.com/file/d/1L7DbeAJBtbeUUYR3qTzJLj4BxCDZQ9aW/view?usp=drivesdk" class="btn small-btn shimmer" target="_blank" rel="noopener">
+                                <i class="fas fa-certificate"></i> View Certificate
+                            </a>
+                            <a href="https://drive.google.com/file/d/1MU-I0VlGqGdiBpyQRD0fqws8Fvi9yS9R/view?usp=drivesdk" class="btn small-btn" target="_blank" rel="noopener">
+                                <i class="fas fa-file-alt"></i> View Offer Letter
+                            </a>
                         </div>
                     </div>
                 </div>
-
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <div class="exp-company">
-                            <h3>Bluestock Fintech</h3>
-                            <span class="exp-role">SDE Intern</span>
-                        </div>
-                        <div class="exp-period">
-                            <span class="period-badge completed">Completed</span>
-                            <span class="period-date">Feb 2025 - Mar 2025</span>
-                        </div>
-                    </div>
-                    <div class="exp-content">
-                        <ul class="exp-highlights">
-                            <li><strong>Fintech:</strong> Financial technology solutions</li>
-                            <li><strong>Security:</strong> Authentication & data protection</li>
-                            <li><strong>APIs:</strong> RESTful client-server communication</li>
-                            <li><strong>Visualization:</strong> Financial analytics components</li>
+                <div class="timeline-item reveal" data-delay="0.5">
+                    <div class="timeline-content">
+                        <h3>Software Development Engineer Intern</h3>
+                        <h4>Bluestock Fintech</h4>
+                        <p class="timeline-date">1 Feb 2025 - 28Mar 2025</p>
+                        <ul class="experience-details">
+                            <li>Built financial technology solutions using modern JavaScript frameworks</li>
+                            <li>Implemented secure authentication and data protection measures</li>
+                            <li>Developed RESTful APIs for client-server communication</li>
+                            <li>Worked on data visualization components for financial analytics</li>
                         </ul>
-                        <div class="exp-proof">
-                            <a href="https://drive.google.com/file/d/1oar5tWX6qPx25k8NYAnJA6zL0qHSnxsM/view?usp=drive_link" class="proof-link" target="_blank"><i class="fas fa-certificate"></i> Certificate</a>
-                            <a href="https://drive.google.com/file/d/1QB596Eg2APagJcmenRxZeJIHLqaSi9oM/view?usp=drivesdk" class="proof-link" target="_blank"><i class="fas fa-file-alt"></i> Offer Letter</a>
+                        <div class="certificate-link">
+                            <a href="https://drive.google.com/file/d/1oar5tWX6qPx25k8NYAnJA6zL0qHSnxsM/view?usp=drive_link" class="btn small-btn shimmer" target="_blank" rel="noopener">
+                                <i class="fas fa-certificate"></i> View Certificate
+                            </a>
+                            <a href="https://drive.google.com/file/d/1QB596Eg2APagJcmenRxZeJIHLqaSi9oM/view?usp=drivesdk " class="btn small-btn" target="_blank" rel="noopener">
+                                <i class="fas fa-file-alt"></i> View Offer Letter
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -332,268 +246,334 @@
         </div>
     </section>
 
-    <!-- LEARNING JOURNEY (Projects) -->
-    <section id="journey" class="journey-section">
+    <section id="projects" class="projects section-transition">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">LEARNING PATH</span>
-                <h2>How I Built My Skills</h2>
-                <p>From tutorials to production - every project taught me something</p>
-            </div>
-
-            <div class="journey-grid">
-                <!-- Production Projects -->
-                <div class="journey-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-rocket"></i>
-                        Production Systems
-                    </h3>
-                    
-                    <div class="project-card featured">
-                        <div class="project-header">
-                            <h4>Bhaktinama Platform</h4>
-                            <span class="project-status live">LIVE</span>
-                        </div>
-                        <p class="project-desc">Full-stack spiritual platform with user authentication, content management, and real-time features. Serving real users with 99.9% uptime.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MySQL</span>
-                            <span>Laravel</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://bhaktinama.com" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Site
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>Healthcare Product System</h4>
-                            <span class="project-status client">CLIENT</span>
-                        </div>
-                        <p class="project-desc">Enterprise healthcare management system with inventory tracking, order processing, and analytics dashboard. Production deployment for real client.</p>
-                        <div class="project-tech">
-                            <span>React.js</span>
-                            <span>API Integration</span>
-                            <span>Maps API</span>
-                        </div>
-                        <div class="project-links">
-                            <span class="project-confidential">
-                                <i class="fas fa-shield-alt"></i> Client Confidential
-                            </span>
+            <h2 class="section-title reveal text-reveal" data-scramble>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card reveal-left card-3d" data-delay="0.1">
+                    <div class="card-3d-inner">
+                        <div class="card-3d-front">
+                            <div class="project-image">
+                                <img src="assets/download.png" alt="Project 1">
+                            </div>
+                            <div class="project-info">
+                                <h3>Amazon Clone</h3>
+                                <p>A full-stack e-commerce solution with payment integration and inventory management.</p>
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                                <a href="https://ecomamazon.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Learning Projects -->
-                <div class="journey-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-graduation-cap"></i>
-                        Skill-Building Projects
-                    </h3>
-                    
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>Healthcare Scheduler</h4>
-                            <span class="project-status collab">IBM COLLAB</span>
-                        </div>
-                        <p class="project-desc">Appointment scheduling system with patient registration, doctor availability, automated reminders. Built in collaboration with IBM.</p>
-                        <div class="project-tech">
-                            <span>React.js</span>
-                            <span>Node.js</span>
-                            <span>Express</span>
-                            <span>IBM Cloud</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/raushandubey" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://heath-schedular.netlify.app/" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                        </div>
+                <div class="project-card reveal-right hover-zoom" data-delay="0.2">
+                    <div class="project-image">
+                        <img src="Screenshot 2025-08-21 080907.png" alt="Project 2">
                     </div>
+                    <div class="project-info">
+                        <h3>Adv Weather App</h3>
+                        <p>A collaborative AI application with real-time updates and notifications.</p>
+                        <p>Real-time weather forecasts with personalized alerts, live updates, and location-based notifications.</p>
 
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>Advanced Weather App</h4>
-                            <span class="project-status learning">MOBILE</span>
-                        </div>
-                        <p class="project-desc">Cross-platform weather application with real-time forecasts, personalized alerts, and location-based notifications.</p>
                         <div class="project-tech">
                             <span>Flutter</span>
                             <span>Dart</span>
-                            <span>C++</span>
+                            <span>c++</span>
+                            <span>Socket.io</span>
+                            <span>CMake</span>
                             <span>Swift</span>
+                            <span>c</span>
+                            <span>Socket.io</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/raushandubey/Adv_Weather_Application" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
+                            <a href="https://github.com/raushandubey/Adv_Weather_Application" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
                         </div>
                     </div>
-
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>AI Calculator</h4>
-                            <span class="project-status learning">AI/ML</span>
-                        </div>
-                        <p class="project-desc">Natural language processing calculator with voice recognition and step-by-step solution explanations.</p>
-                        <div class="project-tech">
-                            <span>React.js</span>
-                            <span>AI API</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/raushandubey/Ai-cal" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://aicalculo.netlify.app/" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                        </div>
+                </div>
+                <div class="project-card reveal-left hover-zoom" data-delay="0.3">
+                    <div class="project-image">
+                        <img src="assets\Untitled design.png" alt="Project 3">
                     </div>
-
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h4>Dubey GPT Discord Bot</h4>
-                            <span class="project-status learning">AI</span>
-                        </div>
-                        <p class="project-desc">AI-powered Discord bot using TensorFlow for content generation based on user prompts.</p>
+                    <div class="project-info">
+                        <h3>Dubey GPT AI Discord Bot</h3>
+                        <p>An AI-powered application that generates content based on user prompts.</p>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>TensorFlow</span>
                             <span>Flask</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/raushandubey" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
+                            <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Tutorial Projects -->
-                <div class="journey-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-book"></i>
-                        Tutorial Implementations
-                    </h3>
-                    <p class="category-note">These projects helped me learn core concepts and patterns</p>
-                    
-                    <div class="tutorial-grid">
-                        <div class="tutorial-card">
-                            <h5>E-Commerce Platform</h5>
-                            <p>Full-stack shopping experience with payment integration</p>
-                            <div class="tutorial-tech">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
-                            </div>
-                            <a href="https://ecomamazon.netlify.app/" target="_blank" class="tutorial-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
+                <div class="project-card reveal-left hover-zoom" data-delay="0.3">
+                    <div class="project-image">
+                        <img src="assets\spotify.png" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>Spotify Clone</h3>
+                        <p>A fully functional music streaming application that allows users to browse, search, and play their favorite songs. Features include user authentication, playlist creation, and real-time music playback. Built with React.js for a dynamic user interface and integrated with the Spotify API for seamless access to a vast library of music.</p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>Spotify API</span>
+                            <span>Node.js</span>
                         </div>
-
-                        <div class="tutorial-card">
-                            <h5>Streaming Platform</h5>
-                            <p>Music streaming with Spotify API integration</p>
-                            <div class="tutorial-tech">
-                                <span>React.js</span>
-                                <span>Spotify API</span>
-                            </div>
-                            <a href="https://spoti.netlify.app/" target="_blank" class="tutorial-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
+                        <div class="project-links">
+                            <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://spoti.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="tutorial-card">
-                            <h5>Video Platform</h5>
-                            <p>Netflix-style interface with TMDB API</p>
-                            <div class="tutorial-tech">
-                                <span>React.js</span>
-                                <span>Firebase</span>
+                <div class="project-card reveal-right hover-zoom" data-delay="0.4">
+                    <div class="project-image">
+                        <img src="assets\download (3).png" alt="Netflix Clone">
+                    </div>
+                    <div class="project-info">
+                        <h3>Netflix Clone</h3>
+                        <p>A responsive Netflix clone with user authentication, movie browsing, and video playback functionality.</p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>Firebase</span>
+                            <span>TMDB API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://zingy-kheer-d8ef04.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card reveal-left hover-zoom" data-delay="0.5">
+                    <div class="project-image">
+                        <img src="assets\HealthCare Scheduler.png" alt="Healthcare Scheduler">
+                    </div>
+                    <div class="project-info">
+                        <h3>Healthcare Scheduler</h3>
+                        <p>A collaborative project with IBM to develop a full-stack healthcare appointment scheduling system. Features include patient registration, doctor availability management, automated reminders, and medical record integration.</p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>IBM Cloud</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://heath-schedular.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                  <div class="project-card reveal-right hover-zoom" data-delay="0.4">
+                    <div class="project-image">
+                        <img src="assets/Screenshot 2025-05-29 040536.png" alt="Smart AI Calculator">
+                    </div>
+                    <div class="project-info">
+                        <h3>Smart AI Calculator</h3>
+                        <p>Smart AI Calculator powered by natural language processing, capable of understanding and solving complex mathematical problems through conversational input. Features include voice recognition, step-by-step solution explanations, and support for multiple languages.</p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>Html</span>
+                            <span>JavaScript</span>
+                            <span>CSS</span>
+                            <span>API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/raushandubey/Ai-cal" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://aicalculo.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-right hover-zoom" data-delay="0.4">
+                    <div class="project-image">
+                        <img src="assets/Screenshot 2025-06-07 083212.png" alt="Smart AI Calculator">
+                    </div>
+                    <div class="project-info">
+                        <h3>Client Project (HealthCare All Product)</h3>
+                        <p>A comprehensive healthcare product management system developed for a client. Features include product catalog management, inventory tracking, order processing, and analytics dashboard. Implemented secure user authentication, role-based access control, and real-time inventory updates. Enhanced user experience with responsive design and intuitive interface. </p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>Html</span>
+                            <span>JavaScript</span>
+                            <span>CSS</span>
+                            <span>API</span>
+                            <span>Map Api</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="private-project-badge">
+                             <i class="fas fa-shield-alt"></i> Client Confidential Project
+                            </span>
+                            <!-- <a href="https://github.com/raushandubey/Ai-cal" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://aicalculo.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- Add SVG drawing animation as section divider -->
+        <svg class="svg-drawing-animation" viewBox="0 0 1200 80" preserveAspectRatio="none">
+            <path d="M0,0 C300,60 900,60 1200,0 L1200,80 L0,80 Z" />
+        </svg>
+    </section>
+
+    <section id="startups" class="startups section-transition">
+        <div class="container">
+            <h2 class="section-title reveal text-reveal" data-scramble>StartUps</h2>
+            <div class="startups-content">
+                <div class="startup-intro reveal-left">
+                    <h3>Entrepreneurial Ventures</h3>
+                    <p>Innovative solutions created to address real-world challenges through technology and creativity.</p>
+                </div>
+                <div class="startups-grid">
+                    <!-- Bhaktinama Startup -->
+                    <div class="startup-card reveal-left hover-zoom" data-delay="0.1">
+                        <div class="startup-image">
+                            <img src="assets/bhaktinama 2.png" alt="Bhaktinama">
+                        </div>
+                        <div class="startup-info">
+                            <h3>Bhaktinama</h3>
+                            <p>
+                                A comprehensive platform for spiritual services, connecting devotees with verified pandits for various puja ceremonies and religious rituals.
+                                <br>
+                                <strong>Work Done:</strong>
+                                <ul>
+                                    <li>Developed core backend APIs for booking and scheduling puja services.</li>
+                                    <li>Designed user interface for mobile and desktop platforms.</li>
+                                    <li>Integrated real-time calendar and notification features.</li>
+                                    <li>Built admin dashboard for pandit verification and management.</li>
+                                </ul>
+                                <!-- <span class="status-badge" style="display:inline-block; margin-top:8px; background:#ffe0b2; color:#b26a00; padding:4px 10px; border-radius:4px;">
+                                    <i class="fas fa-hourglass-half"></i> Not Ready to Launch
+                                </span> -->
+                            </p>
+                            <div class="startup-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-pray"></i>
+                                    <span>Multiple Puja Types</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Real-time Scheduling</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-user-check"></i>
+                                    <span>Verified Pandits</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Mobile Optimized</span>
+                                </div>
                             </div>
-                            <a href="https://zingy-kheer-d8ef04.netlify.app/" target="_blank" class="tutorial-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
+                            <div class="startup-tech">
+                                <span>Laravel</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>Html</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Blade</span>
+                            </div>
+                            <div class="startup-links">
+                                <!-- <a href="https://github.com/raushandubey/bhaktinama" class="btn small-btn"><i class="fab fa-github"></i> Repository</a> -->
+                               <a href="https://www.bhaktinama.com/" class="btn small-btn primary-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Additional Startup Card (Placeholder) -->
+                    <div class="startup-card reveal-right hover-zoom" data-delay="0.2">
+                        <div class="startup-image">
+                            <img src="assets/project-3.png" alt="Future Startup">
+                        </div>
+                        <div class="startup-info">
+                            <h3>Coming Soon</h3>
+                            <p>Our next innovative venture is currently in development. Stay tuned for updates on this exciting new project.</p>
+                            <div class="startup-tech">
+                                <span>Next.js</span>
+                                <span>TypeScript</span>
+                                <span>AWS</span>
+                            </div>
+                            <div class="startup-status">
+                                <span class="status-badge"><i class="fas fa-code-branch"></i> In Development</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Add SVG drawing animation as section divider -->
+        <svg class="svg-drawing-animation" viewBox="0 0 1200 80" preserveAspectRatio="none">
+            <path d="M0,0 C300,60 900,60 1200,0 L1200,80 L0,80 Z" />
+        </svg>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact section-transition">
         <div class="container">
-            <div class="contact-grid">
+            <h2 class="section-title reveal text-reveal">Get In Touch</h2>
+            <div class="contact-content">
                 <div class="contact-info">
-                    <h2>Let's Build Something</h2>
-                    <p class="contact-subtitle">Looking for engineers who ship to production? Let's talk.</p>
-                    
-                    <div class="contact-methods">
-                        <a href="mailto:your.email@example.com" class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <span>your.email@example.com</span>
-                        </a>
-                        <a href="https://github.com/raushandubey" target="_blank" class="contact-method">
-                            <i class="fab fa-github"></i>
-                            <span>github.com/raushandubey</span>
-                        </a>
-                        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-method">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn Profile</span>
-                        </a>
+                    <div class="contact-item reveal-left" data-delay="0.1">
+                    <a href="raushandubey2005@gmail.com">  <i class="fas fa-envelope bounce" ></i></a>
+                        <p>raushandubey2005@gmail.com </p>
                     </div>
-
-                    <div class="contact-cta">
-                        <a href="assets/MyCV Resume.pdf" download class="btn-primary">
-                            <i class="fas fa-download"></i>
-                            <span>Download Resume</span>
-                        </a>
+                    <div class="contact-item reveal-left" data-delay="0.2">
+                        <i class="fas fa-phone bounce"></i>
+                        <p>+91 9934898643</p>
+                    </div>
+                    <div class="contact-item reveal-left" data-delay="0.3">
+                        <i class="fas fa-map-marker-alt bounce"></i>
+                        <p>Dehri, Bihar, India</p>
+                    </div>
+                    <div class="social-links reveal">
+                        <a href="https://www.linkedin.com/in/raushan-dubey01/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/raushandubey" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://leetcode.com/u/Raushandubey01/" class="social-link leetcode-link"><i class="fas fa-code"></i></a>
                     </div>
                 </div>
-
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">
-                            <span>Send Message</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
+                <form class="contact-form reveal-right">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn glow">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Raushan Dubey. Built with production in mind.</p>
-                <div class="footer-status">
-                    <span class="status-dot"></span>
-                    <span>All systems operational</span>
-                </div>
-            </div>
+            <p>&copy; 2024 Raushan Dubey. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script src="script-redesigned.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script src="animations.js"></script>
 </body>
-</html>
+</html> {% endcomment %}
