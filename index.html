@@ -11,12 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="particles-js" class="particles"></div>
-    
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Portfolio</div>
+                <a href="#home" class="logo" onclick="location.reload()">Portfolio</a>
                 <div class="menu-toggle" id="mobile-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -35,14 +33,36 @@
     </header>
 
     <section id="home" class="hero">
+        <div class="system-grid-bg"></div>
         <div class="container">
+            <div class="system-status-bar">
+                <div class="status-item"><span class="status-dot live"></span>SYSTEM ONLINE</div>
+                <div class="status-item"><span class="metric-value">99.9%</span> UPTIME</div>
+                <div class="status-item"><span class="metric-value">12ms</span> RESPONSE</div>
+            </div>
             <div class="hero-content">
-                <h1 class="typewriter">Hello, I'm <br> Raushan Dubey </h1>
+                <div class="system-timeline">
+                    <div class="timeline-node">
+                        <div class="node-year">2024</div>
+                        <div class="node-label">System Initialization</div>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-node active">
+                        <div class="node-year">2025</div>
+                        <div class="node-label">Production Systems Live</div>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-node">
+                        <div class="node-year">2026</div>
+                        <div class="node-label">Scaling & Optimization</div>
+                    </div>
+                </div>
+                <h1 class="glitch-text" data-text="Raushan Dubey">Raushan Dubey</h1>
                 <h2>Software Development Engineer</h2>
-                <p>Passionate about creating innovative solutions through code</p>
+                <p class="system-description">Building production-grade systems with precision and scalability</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn primary-btn">Contact Me</a>
-                    <a href="#projects" class="btn secondary-btn">View My Work</a>
+                    <a href="#contact" class="btn primary-btn">INITIALIZE CONTACT</a>
+                    <a href="#projects" class="btn secondary-btn">VIEW SYSTEMS</a>
                 </div>
             </div>
         </div>
@@ -50,7 +70,7 @@
 
     <section id="about" class="about section-transition">
         <div class="container">
-            <h2 class="section-title reveal text-reveal">About Me</h2>
+            <h2 class="section-title reveal text-reveal"><span class="section-number">01.</span> SYSTEM OVERVIEW</h2>
             <div class="about-content">
                 <div class="about-image float reveal-left hover-zoom">
                     <img src="assets/Raushan Dubey.jpg" alt="Profile Picture">
@@ -179,93 +199,476 @@
 
     <section id="experience" class="experience section-transition">
         <div class="container">
-            <h2 class="section-title reveal text-reveal" data-scramble>Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item reveal" data-delay="0.1">
-                    <div class="timeline-content">
-                        <h3>Software Developer Intern</h3>
-                        <h4>Gopal Narayan Singh University</h4>
-                        <p class="timeline-date">16 June 2025- Pursuing</p>
-                        <ul class="experience-details">
-                            <li>Developed applications using Laravel, PHP, and MySQL for backend services.</li>
-                            <li>Created responsive user interfaces with HTML5, CSS, and JavaScript.</li>
-                            <li>Contributed to mobile app development using Flutter.</li>
-                            <li>Participated in the full software development lifecycle, from concept to deployment.</li>
+            <h2 class="section-title reveal text-reveal" data-scramble><span class="section-number">02.</span> ENGINEERING EXPERIENCE</h2>
+            <div class="exp-grid">
+                
+                <div class="exp-card" data-exp-index="0">
+                    <div class="exp-status-badge status-completed">COMPLETED</div>
+                    <div class="exp-header">
+                        <h3 class="exp-company">Trapigo</h3>
+                        <h4 class="exp-role">Software Developer Intern</h4>
+                        <p class="exp-duration">June 2025 – September 2025</p>
+                    </div>
+                    <p class="exp-impact">Built and maintained production-grade features used by real users across backend, frontend, and mobile systems.</p>
+                    <div class="exp-work">
+                        <h5 class="exp-work-title">What I Did</h5>
+                        <ul class="exp-work-list">
+                            <li>Developed backend services using Laravel, PHP, and MySQL for core business logic</li>
+                            <li>Designed RESTful APIs with validation, security, and error handling</li>
+                            <li>Built responsive frontend components using HTML5, CSS3, and JavaScript</li>
+                            <li>Contributed to Flutter mobile app development and API integration</li>
+                            <li>Worked across full SDLC from feature planning to deployment</li>
                         </ul>
-                        <div class="certificate-link">
-                            <a href="https://drive.google.com/file/d/your-certificate-id" class="btn small-btn shimmer" target="_blank" rel="noopener">
-                                <i class="fas fa-certificate"></i> View Certificate
-                            </a>
-                            <a href="https://drive.google.com/file/d/1X8iy2zv7HJLLFOpQJGsGraITsehJb/view?usp=drivesdk " class="btn small-btn" target="_blank" rel="noopener">
-                                <i class="fas fa-file-alt"></i> View Offer Letter
-                            </a>
-                        </div>
+                    </div>
+                    <div class="exp-tech">
+                        <span class="exp-tech-chip">Laravel</span>
+                        <span class="exp-tech-chip">PHP</span>
+                        <span class="exp-tech-chip">MySQL</span>
+                        <span class="exp-tech-chip">REST APIs</span>
+                        <span class="exp-tech-chip">HTML5</span>
+                        <span class="exp-tech-chip">CSS3</span>
+                        <span class="exp-tech-chip">JavaScript</span>
+                        <span class="exp-tech-chip">Flutter</span>
+                    </div>
+                    <div class="exp-actions">
+                        <a href="https://drive.google.com/file/d/your-certificate-id" class="exp-btn" target="_blank" rel="noopener">
+                            <i class="fas fa-certificate"></i> Certificate
+                        </a>
+                        <a href="https://drive.google.com/file/d/1X8iy2zv7HJLLFOpQJGsGraITsehJb/view?usp=drivesdk" class="exp-btn" target="_blank" rel="noopener">
+                            <i class="fas fa-file-alt"></i> Offer Letter
+                        </a>
                     </div>
                 </div>
-                <div class="timeline-item reveal" data-delay="0.3">
-                    <div class="timeline-content">
-                        <h3>Frontend Developer Intern</h3>
-                        <h4>Ceeras</h4>
-                        <p class="timeline-date">20 Mar 2024 - Pursuing</p>
-                        <ul class="experience-details">
-                            <li>Developed responsive user interfaces using modern JavaScript frameworks</li>
-                            <li>Implemented UI components and features based on design specifications</li>
-                            <li>Collaborated with backend developers to integrate API services</li>
-                            <li>Improved website performance and user experience through optimization techniques</li>
+
+                <div class="exp-card" data-exp-index="1">
+                   <div class="exp-status-badge status-completed">COMPLETED</div>
+                    <div class="exp-header">
+                        <h3 class="exp-company">Ceeras</h3>
+                        <h4 class="exp-role">Frontend Developer Intern</h4>
+                        <p class="exp-duration">March 2024 – July 205</p>
+                    </div>
+                    <p class="exp-impact">Improved frontend performance and API-driven UI workflows for production dashboards.</p>
+                    <div class="exp-work">
+                        <h5 class="exp-work-title">What I Did</h5>
+                        <ul class="exp-work-list">
+                            <li>Built modern UI components using JavaScript and clean CSS architecture</li>
+                            <li>Integrated backend APIs for real-time data rendering</li>
+                            <li>Optimized UI for responsiveness and performance</li>
+                            <li>Collaborated with backend engineers to resolve API and data issues</li>
+                            <li>Refactored components for maintainability and scalability</li>
                         </ul>
-                        <div class="certificate-link">
-                            <a href="https://drive.google.com/file/d/1L7DbeAJBtbeUUYR3qTzJLj4BxCDZQ9aW/view?usp=drivesdk" class="btn small-btn shimmer" target="_blank" rel="noopener">
-                                <i class="fas fa-certificate"></i> View Certificate
-                            </a>
-                            <a href="https://drive.google.com/file/d/1MU-I0VlGqGdiBpyQRD0fqws8Fvi9yS9R/view?usp=drivesdk" class="btn small-btn" target="_blank" rel="noopener">
-                                <i class="fas fa-file-alt"></i> View Offer Letter
-                            </a>
-                        </div>
+                    </div>
+                    <div class="exp-tech">
+                        <span class="exp-tech-chip">JavaScript</span>
+                        <span class="exp-tech-chip">HTML5</span>
+                        <span class="exp-tech-chip">CSS3</span>
+                        <span class="exp-tech-chip">REST APIs</span>
+                        <span class="exp-tech-chip">UI Optimization</span>
+                    </div>
+                    <div class="exp-actions">
+                        <a href="https://drive.google.com/file/d/1L7DbeAJBtbeUUYR3qTzJLj4BxCDZQ9aW/view?usp=drivesdk" class="exp-btn" target="_blank" rel="noopener">
+                            <i class="fas fa-certificate"></i> Certificate
+                        </a>
+                        <a href="https://drive.google.com/file/d/1MU-I0VlGqGdiBpyQRD0fqws8Fvi9yS9R/view?usp=drivesdk" class="exp-btn" target="_blank" rel="noopener">
+                            <i class="fas fa-file-alt"></i> Offer Letter
+                        </a>
                     </div>
                 </div>
-                <div class="timeline-item reveal" data-delay="0.5">
-                    <div class="timeline-content">
-                        <h3>Software Development Engineer Intern</h3>
-                        <h4>Bluestock Fintech</h4>
-                        <p class="timeline-date">1 Feb 2025 - 28Mar 2025</p>
-                        <ul class="experience-details">
-                            <li>Built financial technology solutions using modern JavaScript frameworks</li>
-                            <li>Implemented secure authentication and data protection measures</li>
-                            <li>Developed RESTful APIs for client-server communication</li>
-                            <li>Worked on data visualization components for financial analytics</li>
+
+                <div class="exp-card" data-exp-index="2">
+                    <div class="exp-status-badge status-completed">COMPLETED</div>
+                    <div class="exp-header">
+                        <h3 class="exp-company">Bluestock Fintech</h3>
+                        <h4 class="exp-role">SDE Intern</h4>
+                        <p class="exp-duration">Feb 2025 – Mar 2025</p>
+                    </div>
+                    <p class="exp-impact">Worked on fintech systems involving secure authentication, APIs, and financial data visualization.</p>
+                    <div class="exp-work">
+                        <h5 class="exp-work-title">What I Did</h5>
+                        <ul class="exp-work-list">
+                            <li>Implemented authentication and data protection mechanisms</li>
+                            <li>Built RESTful client-server communication layers</li>
+                            <li>Developed financial analytics and visualization components</li>
+                            <li>Ensured secure and reliable data flow across services</li>
                         </ul>
-                        <div class="certificate-link">
-                            <a href="https://drive.google.com/file/d/1oar5tWX6qPx25k8NYAnJA6zL0qHSnxsM/view?usp=drive_link" class="btn small-btn shimmer" target="_blank" rel="noopener">
-                                <i class="fas fa-certificate"></i> View Certificate
-                            </a>
-                            <a href="https://drive.google.com/file/d/1QB596Eg2APagJcmenRxZeJIHLqaSi9oM/view?usp=drivesdk " class="btn small-btn" target="_blank" rel="noopener">
-                                <i class="fas fa-file-alt"></i> View Offer Letter
-                            </a>
-                        </div>
+                    </div>
+                    <div class="exp-tech">
+                        <span class="exp-tech-chip">Fintech Systems</span>
+                        <span class="exp-tech-chip">Authentication</span>
+                        <span class="exp-tech-chip">REST APIs</span>
+                        <span class="exp-tech-chip">Data Visualization</span>
+                    </div>
+                    <div class="exp-actions">
+                        <a href="https://drive.google.com/file/d/1oar5tWX6qPx25k8NYAnJA6zL0qHSnxsM/view?usp=drive_link" class="exp-btn" target="_blank" rel="noopener">
+                            <i class="fas fa-certificate"></i> Certificate
+                        </a>
+                        <a href="https://drive.google.com/file/d/1QB596Eg2APagJcmenRxZeJIHLqaSi9oM/view?usp=drivesdk" class="exp-btn" target="_blank" rel="noopener">
+                            <i class="fas fa-file-alt"></i> Offer Letter
+                        </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <section id="projects" class="projects section-transition">
         <div class="container">
-            <h2 class="section-title reveal text-reveal" data-scramble>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card reveal-left card-3d" data-delay="0.1">
-                    <div class="card-3d-inner">
-                        <div class="card-3d-front">
-                            <div class="project-image">
-                                <img src="assets/download.png" alt="Project 1">
+            <!-- Clean Learning Path Heading -->
+            <div class="learning-path-header">
+                <div class="learning-path-label">LEARNING PATH</div>
+                <h2 class="learning-path-title">How I Built My Skills</h2>
+                <p class="learning-path-subtitle">From tutorials to production – every project taught me something</p>
+            </div>
+            
+            <!-- 1️⃣ PRODUCTION SYSTEMS -->
+            <div class="project-category">
+                <h3 class="category-label">
+                    <span class="category-icon">▸</span> PRODUCTION SYSTEMS
+                </h3>
+                <div class="projects-production">
+                    
+                    <!-- FLAGSHIP PROJECT: Student Internship Hub -->
+                    <div class="prod-card prod-flagship" data-prod-index="0">
+                        <div class="prod-visual">
+                            <img src="assets/coming soon startup it field.jpg" alt="Student Internship Hub">
+                            <div class="prod-overlay">
+                                <span class="prod-status status-production">PRODUCTION</span>
+                                <span class="prod-flag">MAJOR PROJECT</span>
                             </div>
-                            <div class="project-info">
-                                <h3>Amazon Clone</h3>
-                                <p>A full-stack e-commerce solution with payment integration and inventory management.</p>
-                                <div class="project-tech">
-                                    <span>React</span>
-                                    <span>Node.js</span>
-                                    <span>MongoDB</span>
+                        </div>
+                        
+                        <div class="prod-body">
+                            <div class="prod-header">
+                                <h3 class="prod-title">Student Internship Hub (SIH)</h3>
+                                <span class="prod-domain">EdTech + Recruitment Platform</span>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Problem Statement</h4>
+                                <p class="prod-text">Students struggle to find genuine internships due to fake postings and lack of transparency. Companies cannot efficiently find verified candidates. No unified platform existed to connect students, companies, and educational institutions with proper verification and tracking.</p>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Solution Overview</h4>
+                                <p class="prod-text">Built a centralized internship management platform with three distinct user roles. Students browse verified internships and track applications in real-time. Companies post opportunities and manage hiring pipelines. Administrators ensure platform integrity through verification and moderation workflows.</p>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Core Features</h4>
+                                <ul class="prod-features-list">
+                                    <li>JWT-based authentication with role-based access control (Student, Company, Admin)</li>
+                                    <li>Real-time application status tracking and notifications</li>
+                                    <li>Company verification system with admin approval workflow</li>
+                                    <li>Resume upload and profile management for students</li>
+                                    <li>Admin dashboard for content moderation and user verification</li>
+                                    <li>Application analytics and hiring pipeline management</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">System Architecture</h4>
+                                <p class="prod-text">RESTful API architecture with separated frontend and backend layers. Implements JWT authentication, role-based middleware, and normalized MySQL database with proper foreign key relationships. Built with Express.js routing, input validation, and error handling middleware for production stability.</p>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Tech Stack</h4>
+                                <div class="prod-tech-grid">
+                                    <span class="tech-chip">Node.js</span>
+                                    <span class="tech-chip">Express</span>
+                                    <span class="tech-chip">MySQL</span>
+                                    <span class="tech-chip">JWT Auth</span>
+                                    <span class="tech-chip">RESTful API</span>
+                                    <span class="tech-chip">Railway</span>
+                                    <span class="tech-chip">HTML5</span>
+                                    <span class="tech-chip">CSS3</span>
+                                    <span class="tech-chip">JavaScript</span>
                                 </div>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Engineering Learnings</h4>
+                                <ul class="prod-learnings-list">
+                                    <li>Resolved race conditions in concurrent application submissions</li>
+                                    <li>Optimized database queries with proper indexing and joins</li>
+                                    <li>Implemented secure file upload handling for resumes</li>
+                                    <li>Debugged authentication edge cases in production environment</li>
+                                    <li>Deployed and monitored application on Railway platform</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="prod-actions">
+                                <a href="https://github.com/raushandubey" class="prod-btn prod-btn-secondary">
+                                    <i class="fab fa-github"></i> Repository
+                                </a>
+                                <a href="#" class="prod-btn prod-btn-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bhaktinama Platform -->
+                    <div class="prod-card" data-prod-index="1">
+                        <div class="prod-visual">
+                            <img src="assets/bhaktinama 2.png" alt="Bhaktinama">
+                            <div class="prod-overlay">
+                                <span class="prod-status status-live">LIVE</span>
+                            </div>
+                        </div>
+                        
+                        <div class="prod-body">
+                            <div class="prod-header">
+                                <h3 class="prod-title">Bhaktinama</h3>
+                                <span class="prod-domain">Spiritual Services Platform</span>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Problem Statement</h4>
+                                <p class="prod-text">Devotees lack a reliable platform to connect with verified pandits for religious ceremonies. Booking and scheduling puja services required manual coordination with no transparency or digital record keeping.</p>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Solution Overview</h4>
+                                <p class="prod-text">Developed a comprehensive booking platform connecting devotees with verified pandits. Users can browse puja types, check pandit availability, and schedule ceremonies. Admin dashboard manages pandit verification and service quality control.</p>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Core Features</h4>
+                                <ul class="prod-features-list">
+                                    <li>Real-time calendar integration for puja scheduling</li>
+                                    <li>Pandit verification system with admin approval</li>
+                                    <li>Automated booking confirmations and reminders</li>
+                                    <li>Mobile-responsive interface for devotees and pandits</li>
+                                    <li>Payment integration for service bookings</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">System Architecture</h4>
+                                <p class="prod-text">MVC architecture using Laravel framework with Blade templating. MySQL database with relational schema for users, bookings, and services. Session-based authentication with role separation for users, pandits, and administrators.</p>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Tech Stack</h4>
+                                <div class="prod-tech-grid">
+                                    <span class="tech-chip">Laravel</span>
+                                    <span class="tech-chip">PHP</span>
+                                    <span class="tech-chip">MySQL</span>
+                                    <span class="tech-chip">Blade</span>
+                                    <span class="tech-chip">JavaScript</span>
+                                    <span class="tech-chip">HTML5</span>
+                                    <span class="tech-chip">CSS3</span>
+                                </div>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Engineering Learnings</h4>
+                                <ul class="prod-learnings-list">
+                                    <li>Implemented calendar synchronization for booking conflicts</li>
+                                    <li>Built notification system for booking updates</li>
+                                    <li>Optimized database queries for availability checks</li>
+                                    <li>Deployed Laravel application to production hosting</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="prod-actions">
+                                <a href="https://www.bhaktinama.com/" class="prod-btn prod-btn-primary" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Live Platform
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Client Healthcare Product -->
+                    <div class="prod-card" data-prod-index="2">
+                        <div class="prod-visual">
+                            <img src="assets/Screenshot 2025-06-07 083212.png" alt="Healthcare Product Management">
+                            <div class="prod-overlay">
+                                <span class="prod-status status-client">CLIENT</span>
+                            </div>
+                        </div>
+                        
+                        <div class="prod-body">
+                            <div class="prod-header">
+                                <h3 class="prod-title">Healthcare Product Management System</h3>
+                                <span class="prod-domain">Enterprise Healthcare</span>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Problem Statement</h4>
+                                <p class="prod-text">Healthcare provider needed a centralized system to manage product inventory, track orders, and provide real-time analytics. Existing manual processes caused inventory discrepancies and delayed order fulfillment.</p>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Solution Overview</h4>
+                                <p class="prod-text">Built an enterprise product management system with real-time inventory tracking and order processing. Integrated location-based services for delivery management and analytics dashboard for business insights.</p>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Core Features</h4>
+                                <ul class="prod-features-list">
+                                    <li>Role-based access control for staff and administrators</li>
+                                    <li>Real-time inventory tracking with low-stock alerts</li>
+                                    <li>Order processing workflow with status updates</li>
+                                    <li>Analytics dashboard with sales and inventory metrics</li>
+                                    <li>Map integration for delivery route optimization</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">System Architecture</h4>
+                                <p class="prod-text">React-based SPA with component-driven architecture. RESTful API integration for backend services. State management for real-time inventory updates. Map API integration for location-based features.</p>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Tech Stack</h4>
+                                <div class="prod-tech-grid">
+                                    <span class="tech-chip">React.js</span>
+                                    <span class="tech-chip">JavaScript</span>
+                                    <span class="tech-chip">REST API</span>
+                                    <span class="tech-chip">Map API</span>
+                                    <span class="tech-chip">HTML5</span>
+                                    <span class="tech-chip">CSS3</span>
+                                </div>
+                            </div>
+                            
+                            <div class="prod-section">
+                                <h4 class="prod-section-title">Engineering Learnings</h4>
+                                <ul class="prod-learnings-list">
+                                    <li>Implemented real-time state synchronization across components</li>
+                                    <li>Optimized API calls to reduce unnecessary re-renders</li>
+                                    <li>Built reusable component library for enterprise UI</li>
+                                    <li>Integrated third-party map services with custom markers</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="prod-actions">
+                                <span class="prod-confidential">
+                                    <i class="fas fa-shield-alt"></i> Client Confidential
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- 2️⃣ SKILL-BUILDING PROJECTS -->
+            <div class="project-category">
+                <h3 class="category-label">
+                    <span class="category-icon">▸</span> SKILL-BUILDING PROJECTS
+                </h3>
+                <div class="projects-skill-grid">
+                    <!-- Healthcare Scheduler -->
+                    <div class="project-skill reveal-left" data-delay="0.1">
+                        <div class="skill-image">
+                            <img src="assets\HealthCare Scheduler.png" alt="Healthcare Scheduler">
+                        </div>
+                        <div class="skill-content">
+                            <h3>Healthcare Scheduler</h3>
+                            <p>A collaborative project with IBM to develop a full-stack healthcare appointment scheduling system. Features include patient registration, doctor availability management, automated reminders, and medical record integration.</p>
+                            <div class="project-tech">
+                                <span>React.js</span>
+                                <span>Node.js</span>
+                                <span>Express</span>
+                                <span>IBM Cloud</span>
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                                <a href="https://heath-schedular.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weather App -->
+                    <div class="project-skill reveal-right" data-delay="0.2">
+                        <div class="skill-image">
+                            <img src="Screenshot 2025-08-21 080907.png" alt="Weather App">
+                        </div>
+                        <div class="skill-content">
+                            <h3>Adv Weather App</h3>
+                            <p>Real-time weather forecasts with personalized alerts, live updates, and location-based notifications.</p>
+                            <div class="project-tech">
+                                <span>Flutter</span>
+                                <span>Dart</span>
+                                <span>c++</span>
+                                <span>Socket.io</span>
+                                <span>CMake</span>
+                                <span>Swift</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/raushandubey/Adv_Weather_Application" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                                <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Smart AI Calculator -->
+                    <div class="project-skill reveal-left" data-delay="0.3">
+                        <div class="skill-image">
+                            <img src="assets/Screenshot 2025-05-29 040536.png" alt="Smart AI Calculator">
+                        </div>
+                        <div class="skill-content">
+                            <h3>Smart AI Calculator</h3>
+                            <p>Smart AI Calculator powered by natural language processing, capable of understanding and solving complex mathematical problems through conversational input. Features include voice recognition, step-by-step solution explanations, and support for multiple languages.</p>
+                            <div class="project-tech">
+                                <span>React.js</span>
+                                <span>Html</span>
+                                <span>JavaScript</span>
+                                <span>CSS</span>
+                                <span>API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/raushandubey/Ai-cal" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                                <a href="https://aicalculo.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dubey GPT Discord Bot -->
+                    <div class="project-skill reveal-right" data-delay="0.4">
+                        <div class="skill-image">
+                            <img src="assets\Untitled design.png" alt="Dubey GPT Bot">
+                        </div>
+                        <div class="skill-content">
+                            <h3>Dubey GPT AI Discord Bot</h3>
+                            <p>An AI-powered application that generates content based on user prompts.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>Flask</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                                <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3️⃣ TUTORIAL IMPLEMENTATIONS -->
+            <div class="project-category">
+                <h3 class="category-label">
+                    <span class="category-icon">▸</span> TUTORIAL IMPLEMENTATIONS
+                </h3>
+                <div class="projects-skill-grid">
+                    <!-- Amazon Clone -->
+                    <div class="project-skill reveal-left" data-delay="0.1">
+                        <div class="skill-image">
+                            <img src="assets/download.png" alt="Amazon Clone">
+                        </div>
+                        <div class="skill-content">
+                            <h3>Amazon Clone</h3>
+                            <p>A full-stack e-commerce solution with payment integration and inventory management.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
@@ -273,158 +676,48 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="project-card reveal-right hover-zoom" data-delay="0.2">
-                    <div class="project-image">
-                        <img src="Screenshot 2025-08-21 080907.png" alt="Project 2">
+                    <!-- Spotify Clone -->
+                    <div class="project-skill reveal-right" data-delay="0.2">
+                        <div class="skill-image">
+                            <img src="assets\spotify.png" alt="Spotify Clone">
+                        </div>
+                        <div class="skill-content">
+                            <h3>Spotify Clone</h3>
+                            <p>A fully functional music streaming application that allows users to browse, search, and play their favorite songs. Features include user authentication, playlist creation, and real-time music playback.</p>
+                            <div class="project-tech">
+                                <span>React.js</span>
+                                <span>Spotify API</span>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                                <a href="https://spoti.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Adv Weather App</h3>
-                        <p>A collaborative AI application with real-time updates and notifications.</p>
-                        <p>Real-time weather forecasts with personalized alerts, live updates, and location-based notifications.</p>
 
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Dart</span>
-                            <span>c++</span>
-                            <span>Socket.io</span>
-                            <span>CMake</span>
-                            <span>Swift</span>
-                            <span>c</span>
-                            <span>Socket.io</span>
+                    <!-- Netflix Clone -->
+                    <div class="project-skill reveal-left" data-delay="0.3">
+                        <div class="skill-image">
+                            <img src="assets\download (3).png" alt="Netflix Clone">
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/raushandubey/Adv_Weather_Application" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card reveal-left hover-zoom" data-delay="0.3">
-                    <div class="project-image">
-                        <img src="assets\Untitled design.png" alt="Project 3">
-                    </div>
-                    <div class="project-info">
-                        <h3>Dubey GPT AI Discord Bot</h3>
-                        <p>An AI-powered application that generates content based on user prompts.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>TensorFlow</span>
-                            <span>Flask</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <div class="skill-content">
+                            <h3>Netflix Clone</h3>
+                            <p>A responsive Netflix clone with user authentication, movie browsing, and video playback functionality.</p>
+                            <div class="project-tech">
+                                <span>React.js</span>
+                                <span>Firebase</span>
+                                <span>TMDB API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                                <a href="https://zingy-kheer-d8ef04.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card reveal-left hover-zoom" data-delay="0.3">
-                    <div class="project-image">
-                        <img src="assets\spotify.png" alt="Project 3">
-                    </div>
-                    <div class="project-info">
-                        <h3>Spotify Clone</h3>
-                        <p>A fully functional music streaming application that allows users to browse, search, and play their favorite songs. Features include user authentication, playlist creation, and real-time music playback. Built with React.js for a dynamic user interface and integrated with the Spotify API for seamless access to a vast library of music.</p>
-                        <div class="project-tech">
-                            <span>React.js</span>
-                            <span>Spotify API</span>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://spoti.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card reveal-right hover-zoom" data-delay="0.4">
-                    <div class="project-image">
-                        <img src="assets\download (3).png" alt="Netflix Clone">
-                    </div>
-                    <div class="project-info">
-                        <h3>Netflix Clone</h3>
-                        <p>A responsive Netflix clone with user authentication, movie browsing, and video playback functionality.</p>
-                        <div class="project-tech">
-                            <span>React.js</span>
-                            <span>Firebase</span>
-                            <span>TMDB API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://zingy-kheer-d8ef04.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card reveal-left hover-zoom" data-delay="0.5">
-                    <div class="project-image">
-                        <img src="assets\HealthCare Scheduler.png" alt="Healthcare Scheduler">
-                    </div>
-                    <div class="project-info">
-                        <h3>Healthcare Scheduler</h3>
-                        <p>A collaborative project with IBM to develop a full-stack healthcare appointment scheduling system. Features include patient registration, doctor availability management, automated reminders, and medical record integration.</p>
-                        <div class="project-tech">
-                            <span>React.js</span>
-                            <span>Node.js</span>
-                            <span>Express</span>
-                            <span>IBM Cloud</span>
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/raushandubey" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://heath-schedular.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                  <div class="project-card reveal-right hover-zoom" data-delay="0.4">
-                    <div class="project-image">
-                        <img src="assets/Screenshot 2025-05-29 040536.png" alt="Smart AI Calculator">
-                    </div>
-                    <div class="project-info">
-                        <h3>Smart AI Calculator</h3>
-                        <p>Smart AI Calculator powered by natural language processing, capable of understanding and solving complex mathematical problems through conversational input. Features include voice recognition, step-by-step solution explanations, and support for multiple languages.</p>
-                        <div class="project-tech">
-                            <span>React.js</span>
-                            <span>Html</span>
-                            <span>JavaScript</span>
-                            <span>CSS</span>
-                            <span>API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/raushandubey/Ai-cal" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://aicalculo.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card reveal-right hover-zoom" data-delay="0.4">
-                    <div class="project-image">
-                        <img src="assets/Screenshot 2025-06-07 083212.png" alt="Smart AI Calculator">
-                    </div>
-                    <div class="project-info">
-                        <h3>Client Project (HealthCare All Product)</h3>
-                        <p>A comprehensive healthcare product management system developed for a client. Features include product catalog management, inventory tracking, order processing, and analytics dashboard. Implemented secure user authentication, role-based access control, and real-time inventory updates. Enhanced user experience with responsive design and intuitive interface. </p>
-                        <div class="project-tech">
-                            <span>React.js</span>
-                            <span>Html</span>
-                            <span>JavaScript</span>
-                            <span>CSS</span>
-                            <span>API</span>
-                            <span>Map Api</span>
-                        </div>
-                        <div class="project-links">
-                            <span class="private-project-badge">
-                             <i class="fas fa-shield-alt"></i> Client Confidential Project
-                            </span>
-                            <!-- <a href="https://github.com/raushandubey/Ai-cal" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://aicalculo.netlify.app/" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a> -->
-                        </div>
-                    </div>
-                </div>
+            </div>
 
             </div>
         </div>
@@ -437,7 +730,7 @@
 
     <section id="startups" class="startups section-transition">
         <div class="container">
-            <h2 class="section-title reveal text-reveal" data-scramble>StartUps</h2>
+            <h2 class="section-title reveal text-reveal" data-scramble><span class="section-number">04.</span> STARTUP SYSTEMS</h2>
             <div class="startups-content">
                 <div class="startup-intro reveal-left">
                     <h3>Entrepreneurial Ventures</h3>
@@ -528,7 +821,7 @@
 
     <section id="contact" class="contact section-transition">
         <div class="container">
-            <h2 class="section-title reveal text-reveal">Get In Touch</h2>
+            <h2 class="section-title reveal text-reveal"><span class="section-number">05.</span> INITIALIZE CONTACT</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item reveal-left" data-delay="0.1">
@@ -574,8 +867,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
-    <script src="animations.js"></script>
 </body>
 </html>
