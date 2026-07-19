@@ -4057,3 +4057,91 @@ footer {
         stroke-dashoffset: 0;
     }
 }
+
+/* ==========================================================================
+   SYSTEM PROFILE SELECTOR DROPDOWN (2026 UPDATE)
+   ========================================================================== */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: #112240;
+    border: 1px solid var(--primary-color, #00f0ff);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    min-width: 320px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.dropdown-container:hover .dropdown-menu,
+.dropdown-container.active .dropdown-menu {
+    display: block;
+    animation: fadeInSlide 0.2s ease forwards;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #ccd6f6;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item i {
+    color: var(--primary-color, #00f0ff);
+    font-size: 1rem;
+    width: 16px;
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    background: rgba(0, 240, 255, 0.1);
+    color: #00f0ff;
+    padding-left: 20px;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adjustments for skills grid with 4 categories */
+@media (min-width: 992px) {
+    .skills-container {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+@media (max-width: 767px) {
+    .skills-container {
+        grid-template-columns: 1fr !important;
+    }
+}

@@ -495,4 +495,17 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     setVH();
     window.addEventListener('resize', setVH);
+
+    // Dropdown toggle for mobile
+    const dropdownTrigger = document.querySelector('.dropdown-trigger');
+    const dropdownContainer = document.querySelector('.dropdown-container');
+    if (dropdownTrigger && dropdownContainer) {
+        dropdownTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownContainer.classList.toggle('active');
+        });
+        document.addEventListener('click', () => {
+            dropdownContainer.classList.remove('active');
+        });
+    }
 });
