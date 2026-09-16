@@ -46,23 +46,28 @@ class AnimationEngine {
     }
 
     updateActiveNavLink() {
-        const sections = document.querySelectorAll('section');
+        const targets = document.querySelectorAll('section, #localkart');
         const navLinks = document.querySelectorAll('.nav-link');
         
         let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (this.scrollY >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
+        targets.forEach(target => {
+            const rect = target.getBoundingClientRect();
+            if (rect.top <= 220 && rect.bottom >= 100) {
+                current = target.getAttribute('id');
             }
         });
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active');
-            }
-        });
+        if (current) {
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href') || '';
+                const linkId = href.startsWith('#') ? href.substring(1) : href;
+                if (linkId === current) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
     }
 
     updateParallax() {
@@ -400,16 +405,24 @@ class SmoothScroll {
     init() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', (e) => {
-                e.preventDefault();
                 const targetId = anchor.getAttribute('href');
-                const target = document.querySelector(targetId);
+                if (!targetId || targetId === '#') return;
 
+                const target = document.querySelector(targetId);
                 if (target) {
-                    const offsetTop = target.offsetTop - 80;
+                    e.preventDefault();
+                    const headerOffset = 85;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
                     window.scrollTo({
-                        top: offsetTop,
+                        top: offsetPosition,
                         behavior: 'smooth'
                     });
+
+                    if (history.pushState) {
+                        history.pushState(null, null, targetId);
+                    }
                 }
             });
         });

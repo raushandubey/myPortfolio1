@@ -4535,3 +4535,13 @@ footer {
         font-size: 1.3rem;
     }
 }
+
+/* Native anchor offset for sticky header */
+html {
+    scroll-behavior: smooth;
+}
+
+#localkart, section {
+    scroll-margin-top: 90px;
+}
+
