@@ -4158,3 +4158,380 @@ footer {
         grid-template-columns: 1fr !important;
     }
 }
+
+/* =========================================================
+   2026 FOUNDER EDITION - MODERN OBSIDIAN & EMERALD DESIGN SYSTEM
+   ========================================================= */
+
+/* Interactive Glow Card */
+.interactive-glow-card {
+    position: relative;
+    background: rgba(13, 19, 33, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.3s ease, 
+                box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interactive-glow-card::before {
+    content: '';
+    position: absolute;
+    top: var(--mouse-y, -200px);
+    left: var(--mouse-x, -200px);
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.14) 0%, rgba(6, 182, 212, 0.04) 40%, transparent 70%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.interactive-glow-card:hover::before {
+    opacity: 1;
+}
+
+.interactive-glow-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(16, 185, 129, 0.35);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 24px rgba(16, 185, 129, 0.12);
+}
+
+/* =========================================================
+   ARCHITECTURAL & TECHNICAL ARSENAL GRID
+   ========================================================= */
+.arsenal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.arsenal-card {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: relative;
+    z-index: 2;
+}
+
+.arsenal-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.arsenal-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #10b981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.arsenal-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f1f5f9;
+}
+
+.arsenal-subtitle {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    display: block;
+    margin-top: 2px;
+}
+
+.arsenal-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.arsenal-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: #e2e8f0;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: default;
+}
+
+.arsenal-chip i {
+    color: #10b981;
+    font-size: 0.85rem;
+}
+
+.arsenal-chip:hover {
+    background: rgba(16, 185, 129, 0.12);
+    border-color: #10b981;
+    color: #10b981;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+/* =========================================================
+   FOUNDER THESIS CARD
+   ========================================================= */
+.founder-thesis-card {
+    padding: 2.25rem;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.06) 0%, rgba(13, 19, 33, 0.9) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(16, 185, 129, 0.08);
+}
+
+.thesis-header {
+    margin-bottom: 2rem;
+}
+
+.thesis-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    margin-bottom: 0.75rem;
+}
+
+.thesis-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0.5rem 0;
+    line-height: 1.3;
+}
+
+.thesis-subtitle {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    max-width: 850px;
+    margin: 0;
+}
+
+.thesis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.thesis-col {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.thesis-col:hover {
+    background: rgba(16, 185, 129, 0.04);
+    border-color: rgba(16, 185, 129, 0.25);
+    transform: translateY(-2px);
+}
+
+.thesis-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.thesis-col h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin-bottom: 0.5rem;
+}
+
+.thesis-col p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* =========================================================
+   APP SWITCHER & LIVE PREVIEW CARDS
+   ========================================================= */
+.app-switcher-container {
+    margin: 2rem 0;
+    padding: 1.75rem;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+}
+
+.app-switcher-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.switcher-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #06b6d4;
+    background: rgba(6, 182, 212, 0.12);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    padding: 4px 10px;
+    border-radius: 9999px;
+}
+
+.switcher-note {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.app-tabs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.app-tab-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    color: inherit;
+    position: relative;
+    z-index: 2;
+}
+
+.tab-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.tab-icon-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(16, 185, 129, 0.12);
+    color: #10b981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.tab-role-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.app-tab-card h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin: 0 0 0.4rem 0;
+}
+
+.app-tab-card p {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    line-height: 1.45;
+    margin: 0 0 1rem 0;
+    flex-grow: 1;
+}
+
+.tab-card-footer {
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tab-launch-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #10b981;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.app-tab-card:hover {
+    transform: translateY(-3px);
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 16px rgba(16, 185, 129, 0.15);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================= */
+@media (max-width: 1024px) {
+    .app-tabs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .thesis-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .arsenal-grid {
+        grid-template-columns: 1fr;
+    }
+    .app-tabs-grid {
+        grid-template-columns: 1fr;
+    }
+    .founder-thesis-card {
+        padding: 1.5rem;
+    }
+    .thesis-title {
+        font-size: 1.3rem;
+    }
+}
