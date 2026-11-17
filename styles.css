@@ -4548,132 +4548,574 @@ html {
 
 
 /* =========================================================
-   ZNOW QUICK-COMMERCE ECOSYSTEM - ULTRA PREMIUM STYLING
+   ZNOW QUICK-COMMERCE ECOSYSTEM - ULTRA PREMIUM 2026 STYLING
    ========================================================= */
 
-/* Venture Navigation Pills */
+/* Nav Venture Dot & Link */
 .nav-link-znow {
     color: #f59e0b !important;
     font-weight: 700 !important;
-    position: relative;
-}
-.nav-link-znow::after {
-    background-color: #f59e0b !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
 }
 
-/* Znow Flagship Card */
+.nav-dot-amber {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #f59e0b;
+    box-shadow: 0 0 8px #f59e0b;
+    animation: pulseAmber 2s infinite ease-in-out;
+}
+
+@keyframes pulseAmber {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.6; }
+}
+
+/* Grid & Flexbox Overflow Protection */
+.prod-card,
+.prod-znow-card,
+.prod-body,
+.znow-body,
+.znow-gallery-section,
+.znow-screens-scroll,
+.znow-hero-stage,
+.znow-hero-container,
+.znow-switcher {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Znow Flagship Card - World Class Polish */
 .prod-znow-card {
-    border: 1px solid rgba(245, 158, 11, 0.45) !important;
-    box-shadow: 0 0 35px rgba(245, 158, 11, 0.12), 0 20px 50px rgba(0, 0, 0, 0.5) !important;
-    background: linear-gradient(180deg, rgba(245, 158, 11, 0.04) 0%, rgba(17, 34, 64, 0.95) 100%) !important;
-    margin-bottom: 3rem;
+    border: 1px solid rgba(245, 158, 11, 0.32) !important;
+    box-shadow: 0 24px 70px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(245, 158, 11, 0.08) !important;
+    background: radial-gradient(ellipse at 50% 0%, rgba(245, 158, 11, 0.07) 0%, rgba(13, 22, 40, 0.98) 60%, #080d1a 100%) !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    margin-bottom: 3.5rem !important;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-.prod-znow-badge {
-    background: #f59e0b !important;
-    color: #070b12 !important;
-    font-weight: 800 !important;
+.prod-znow-card:hover {
+    border-color: rgba(245, 158, 11, 0.5) !important;
+    box-shadow: 0 30px 80px -15px rgba(0, 0, 0, 0.85), 0 0 50px rgba(245, 158, 11, 0.14) !important;
 }
 
-.prod-znow-flag {
-    background: #d97706 !important;
-    color: #ffffff !important;
-    font-weight: 700 !important;
-}
-
-/* Dual Mode Expansion Grid */
-.dualmode-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-    margin: 1.5rem 0;
-}
-
-.dualmode-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(245, 158, 11, 0.25);
-    border-radius: 12px;
-    padding: 1.25rem;
+/* Hero Stage Visual Container */
+.znow-hero-stage {
     position: relative;
-    transition: all 0.3s ease;
+    padding: 1.25rem 1.25rem 0 1.25rem;
+    background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, rgba(10, 18, 34, 0.6) 100%);
+    border-bottom: 1px solid rgba(245, 158, 11, 0.15);
 }
 
-.dualmode-card:hover {
-    border-color: #f59e0b;
-    background: rgba(245, 158, 11, 0.06);
-    transform: translateY(-2px);
+.znow-hero-container {
+    position: relative;
+    max-height: 380px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
-.dualmode-badge {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 3px 8px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 0.5rem;
+.znow-hero-img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.badge-mode-a {
-    background: rgba(239, 68, 68, 0.15);
-    color: #ef4444;
-    border: 1px solid rgba(239, 68, 68, 0.3);
+.znow-hero-container:hover .znow-hero-img {
+    transform: scale(1.02);
 }
 
-.badge-mode-b {
-    background: rgba(245, 158, 11, 0.15);
-    color: #f59e0b;
-    border: 1px solid rgba(245, 158, 11, 0.3);
+.znow-hero-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: linear-gradient(to bottom, rgba(13, 22, 40, 0) 0%, rgba(13, 22, 40, 0.6) 60%, rgba(13, 22, 40, 0.95) 100%);
+    pointer-events: none;
 }
 
-.dualmode-card h5 {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #f1f5f9;
-    margin: 0.25rem 0 0.5rem 0;
-}
-
-.dualmode-card p {
-    font-size: 0.85rem;
-    color: #94a3b8;
-    line-height: 1.5;
-    margin: 0 0 0.75rem 0;
-}
-
-.dualmode-specs {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 0.8rem;
-    color: #cbd5e1;
-    font-family: 'JetBrains Mono', monospace;
-}
-
-.dualmode-specs li {
-    padding: 4px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+.znow-hero-badges-bar {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    pointer-events: none;
+    z-index: 10;
 }
 
-.dualmode-specs li span.spec-label {
-    color: #64748b;
+.znow-pill-badge {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
-.dualmode-specs li span.spec-val {
+.znow-pill-badge.active-live {
+    background: rgba(10, 16, 28, 0.85);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+
+.status-pulse-dot-amber {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f59e0b;
+    box-shadow: 0 0 10px #f59e0b;
+    animation: pulseAmber 1.8s infinite ease-in-out;
+}
+
+.znow-pill-badge.venture-tag {
+    background: rgba(245, 158, 11, 0.92);
+    color: #080d1a;
+    border: 1px solid #fbbf24;
+    font-weight: 800;
+}
+
+/* Znow Card Body */
+.znow-body {
+    padding: 2.25rem 2.25rem 2.5rem 2.25rem !important;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+}
+
+/* Brand Header Area */
+.znow-brand-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid rgba(245, 158, 11, 0.16);
+}
+
+.znow-title-area {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.znow-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.znow-logo-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.25) 0%, rgba(217, 119, 6, 0.1) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #f59e0b;
+    font-size: 1.4rem;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+}
+
+.znow-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.znow-main-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin: 0;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #ffffff 40%, #fde68a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.znow-speed-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    color: #f59e0b;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 9999px;
+    letter-spacing: 0.05em;
+}
+
+.znow-domain-tag {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 0.92rem;
+    color: #cbd5e1;
+    font-weight: 500;
+    display: block;
+    margin-top: 4px;
+}
+
+.znow-hub-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    color: #f59e0b;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
     font-weight: 600;
 }
 
-/* Znow Visual Gallery */
+/* Section Sub-Headers */
+.znow-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.znow-section-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #fbbf24;
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.znow-section-title {
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #f8fafc !important;
+    letter-spacing: -0.01em !important;
+    text-transform: none !important;
+    margin: 0 !important;
+}
+
+/* Problem vs Solution Bento Grid */
+.znow-problem-solution-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.znow-narrative-card {
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.znow-narrative-card.problem-card {
+    background: linear-gradient(145deg, rgba(239, 68, 68, 0.05) 0%, rgba(15, 23, 42, 0.6) 100%);
+    border: 1px solid rgba(239, 68, 68, 0.22);
+}
+
+.znow-narrative-card.solution-card {
+    background: linear-gradient(145deg, rgba(245, 158, 11, 0.08) 0%, rgba(15, 23, 42, 0.6) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.narrative-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.problem-tag {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.solution-tag {
+    background: rgba(245, 158, 11, 0.18);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.znow-narrative-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin: 0;
+    line-height: 1.35;
+}
+
+.znow-narrative-card p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0;
+}
+
+.narrative-metric {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.metric-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.problem-card .metric-num {
+    color: #f87171;
+}
+
+.solution-card .metric-num {
+    color: #f59e0b;
+}
+
+.metric-desc {
+    font-size: 0.78rem;
+    color: #cbd5e1;
+    line-height: 1.4;
+}
+
+/* Dual Mode Architecture Grid - Polished & Balanced */
+.dualmode-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.dualmode-card {
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+.mode-a-card {
+    border: 1px solid rgba(59, 130, 246, 0.28);
+}
+
+.mode-a-card:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.15);
+    transform: translateY(-2px);
+}
+
+.mode-b-card {
+    border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.mode-b-card:hover {
+    border-color: #f59e0b;
+    box-shadow: 0 12px 30px rgba(245, 158, 11, 0.18);
+    transform: translateY(-2px);
+}
+
+.dualmode-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.dualmode-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 9px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pill-a {
+    background: rgba(59, 130, 246, 0.15);
+    color: #93c5fd;
+    border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.pill-b {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.dualmode-badge-sub {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.dualmode-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0 0 0.5rem 0;
+}
+
+.dualmode-desc {
+    font-size: 0.86rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0 0 1.25rem 0;
+    min-height: 48px;
+}
+
+.dualmode-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 0.85rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.spec-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.spec-k {
+    font-size: 0.68rem;
+    color: #64748b;
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.spec-v {
+    font-size: 0.85rem;
+    color: #f1f5f9;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mode-b-card .spec-v {
+    color: #fbbf24;
+}
+
+/* Production Mobile Visuals & Smartphone Gallery */
+.znow-gallery-section {
+    background: rgba(10, 16, 28, 0.4);
+    border: 1px solid rgba(245, 158, 11, 0.16);
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.znow-gallery-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.znow-gallery-subtitle {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin: 2px 0 0 0;
+}
+
+.znow-gallery-nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.znow-nav-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: #fbbf24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.znow-nav-btn:hover {
+    background: #f59e0b;
+    color: #080d1a;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+    transform: translateY(-2px);
+}
+
 .znow-screens-scroll {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     overflow-x: auto;
-    padding: 1rem 0;
-    margin: 1.25rem 0;
+    padding: 0.75rem 0.5rem 1.5rem 0.5rem;
+    scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: #f59e0b rgba(255, 255, 255, 0.05);
+    scroll-snap-type: x mandatory;
 }
 
 .znow-screens-scroll::-webkit-scrollbar {
@@ -4688,52 +5130,280 @@ html {
     border-radius: 9999px;
 }
 
-.znow-screen-item {
-    flex: 0 0 210px;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
-    background: #0f172a;
+.znow-phone-card {
+    flex: 0 0 240px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.znow-phone-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Ultra-Premium CSS Smartphone Mockup */
+.znow-phone-chassis {
+    width: 240px;
+    height: 480px;
+    background: #000000;
+    border-radius: 36px;
+    padding: 9px;
     position: relative;
+    box-shadow: 
+        0 0 0 2px #272f3d,
+        0 0 0 4px rgba(245, 158, 11, 0.18),
+        0 20px 40px -10px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(245, 158, 11, 0.1);
+    transition: all 0.35s ease;
 }
 
-.znow-screen-item:hover {
-    transform: translateY(-4px) scale(1.02);
-    border-color: #f59e0b;
-    box-shadow: 0 12px 32px rgba(245, 158, 11, 0.25);
+.znow-phone-card:hover .znow-phone-chassis {
+    box-shadow: 
+        0 0 0 2px #f59e0b,
+        0 0 0 5px rgba(245, 158, 11, 0.3),
+        0 24px 50px -10px rgba(0, 0, 0, 0.9),
+        0 0 30px rgba(245, 158, 11, 0.25);
 }
 
-.znow-screen-item img {
+.znow-phone-notch {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 68px;
+    height: 16px;
+    background: #000000;
+    border-radius: 10px;
+    z-index: 10;
+    box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.znow-phone-viewport {
     width: 100%;
-    height: 380px;
-    display: block;
+    height: 100%;
+    border-radius: 27px;
+    overflow: hidden;
+    position: relative;
+    background: #090e17;
+}
+
+.znow-phone-viewport img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: top;
+    display: block;
 }
 
-.znow-screen-caption {
-    padding: 8px 10px;
+.znow-glass-glare {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 30%, transparent 60%);
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Phone Caption Box */
+.znow-phone-caption-box {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.znow-phone-card:hover .znow-phone-caption-box {
+    border-color: rgba(245, 158, 11, 0.35);
+}
+
+.znow-screen-tag {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    color: #f8fafc;
-    background: rgba(15, 23, 42, 0.95);
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #fbbf24;
+    letter-spacing: 0.04em;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 }
 
-/* Subsystems Grid for Znow */
+.znow-screen-name {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin: 0;
+}
+
+.znow-screen-desc {
+    font-size: 0.74rem;
+    color: #94a3b8;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Core Engineering Breakthroughs Bento Grid */
+.znow-breakthroughs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.15rem;
+    margin-top: 1.25rem;
+}
+
+.breakthrough-card {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.breakthrough-card:hover {
+    border-color: rgba(245, 158, 11, 0.35);
+    background: rgba(245, 158, 11, 0.04);
+    transform: translateY(-3px);
+}
+
+.breakthrough-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breakthrough-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(245, 158, 11, 0.12);
+    color: #f59e0b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+}
+
+.breakthrough-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #fbbf24;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    padding: 2px 7px;
+    border-radius: 4px;
+}
+
+.breakthrough-card h5 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0;
+    line-height: 1.35;
+}
+
+.breakthrough-card p {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.breakthrough-card code {
+    background: rgba(0, 0, 0, 0.35);
+    color: #fbbf24;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 0.76rem;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+/* Tech Stack Container */
+.znow-tech-stack-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-top: 1rem;
+}
+
+.znow-tech-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.tech-group-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 0.05em;
+}
+
+.tech-chips-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-chip.highlight-amber {
+    background: rgba(245, 158, 11, 0.12) !important;
+    border-color: rgba(245, 158, 11, 0.45) !important;
+    color: #fbbf24 !important;
+    font-weight: 600;
+}
+
+/* 4 Monorepo Subsystems Grid */
+.znow-switcher {
+    margin-top: 1.5rem;
+    background: rgba(10, 16, 28, 0.45);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 14px;
+    padding: 1.5rem;
+}
+
+.switcher-badge-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+.switcher-badge.znow-amber-badge {
+    background: rgba(245, 158, 11, 0.15) !important;
+    color: #fbbf24 !important;
+    border: 1px solid rgba(245, 158, 11, 0.35) !important;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 5px 12px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
 .znow-subsystems-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin: 1.5rem 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.85rem;
 }
 
 .znow-subsystem-card {
-    background: rgba(255, 255, 255, 0.025);
-    border: 1px solid rgba(245, 158, 11, 0.2);
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     padding: 1.25rem;
     display: flex;
@@ -4747,7 +5417,19 @@ html {
     border-color: #f59e0b;
     background: rgba(245, 158, 11, 0.06);
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 16px rgba(245, 158, 11, 0.18);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(245, 158, 11, 0.15);
+}
+
+.znow-subsystem-card.active-card {
+    border-color: rgba(245, 158, 11, 0.35);
+    background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, rgba(15, 23, 42, 0.8) 100%);
+}
+
+.tab-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
 }
 
 .znow-icon-badge {
@@ -4767,72 +5449,166 @@ html {
     font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 0.05em;
-    color: #fbbf24;
-    background: rgba(245, 158, 11, 0.15);
-    border: 1px solid rgba(245, 158, 11, 0.3);
-    padding: 2px 6px;
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3px 8px;
     border-radius: 4px;
 }
 
+.live-pulse-badge {
+    color: #fbbf24 !important;
+    background: rgba(245, 158, 11, 0.18) !important;
+    border-color: rgba(245, 158, 11, 0.4) !important;
+}
+
 .znow-subsystem-card h4 {
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 0.98rem;
+    font-weight: 700;
     color: #f1f5f9;
-    margin: 0.75rem 0 0.4rem 0;
+    margin: 0.25rem 0 0.5rem 0;
 }
 
 .znow-subsystem-card p {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     color: #94a3b8;
-    line-height: 1.45;
+    line-height: 1.5;
     margin: 0 0 1rem 0;
     flex-grow: 1;
 }
 
+.tab-card-footer {
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .znow-launch-text {
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.78rem;
+    font-weight: 700;
     color: #f59e0b;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
 }
 
+/* Znow Actions Bar */
+.znow-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .prod-btn-coffee {
     background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
-    color: #070b12 !important;
+    color: #080d1a !important;
     font-weight: 700 !important;
-    border: none !important;
+    border: 1px solid #fbbf24 !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3) !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease;
 }
 
 .prod-btn-coffee:hover {
-    box-shadow: 0 0 20px rgba(245, 158, 11, 0.5) !important;
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.55) !important;
     transform: translateY(-2px);
-    color: #000 !important;
+    color: #000000 !important;
 }
 
-/* Native anchor offset for sticky header */
-#znow, #localkart, section {
-    scroll-margin-top: 90px;
+.znow-btn-github {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #e2e8f0 !important;
+    font-weight: 600 !important;
+    padding: 10px 18px !important;
+    border-radius: 8px !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease;
 }
 
-@media (max-width: 1024px) {
+.znow-btn-github:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-2px);
+}
+
+.znow-btn-deck {
+    background: rgba(245, 158, 11, 0.08) !important;
+    border: 1px solid rgba(245, 158, 11, 0.25) !important;
+    color: #fbbf24 !important;
+    font-weight: 600 !important;
+    padding: 10px 18px !important;
+    border-radius: 8px !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.znow-btn-deck:hover {
+    background: rgba(245, 158, 11, 0.16) !important;
+    border-color: #f59e0b !important;
+    transform: translateY(-2px);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
     .znow-subsystems-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .znow-breakthroughs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .znow-body {
+        padding: 1.5rem !important;
+    }
+    .znow-problem-solution-grid {
+        grid-template-columns: 1fr;
     }
     .dualmode-grid {
         grid-template-columns: 1fr;
     }
+    .znow-breakthroughs-grid {
+        grid-template-columns: 1fr;
+    }
+    .znow-brand-header {
+        flex-direction: column;
+    }
+    .znow-hero-badges-bar {
+        position: static;
+        padding-top: 1rem;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .znow-subsystems-grid {
         grid-template-columns: 1fr;
     }
-    .znow-screen-item {
-        flex: 0 0 170px;
+    .znow-phone-card {
+        flex: 0 0 210px;
     }
-    .znow-screen-item img {
-        height: 300px;
+    .znow-phone-chassis {
+        width: 210px;
+        height: 420px;
+    }
+    .znow-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .prod-btn-coffee, .znow-btn-github, .znow-btn-deck {
+        justify-content: center;
     }
 }
