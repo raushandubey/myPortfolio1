@@ -46,7 +46,7 @@ class AnimationEngine {
     }
 
     updateActiveNavLink() {
-        const targets = document.querySelectorAll('section, #localkart');
+        const targets = document.querySelectorAll('section, #znow, #localkart');
         const navLinks = document.querySelectorAll('.nav-link');
         
         let current = '';

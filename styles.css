@@ -4545,3 +4545,294 @@ html {
     scroll-margin-top: 90px;
 }
 
+
+
+/* =========================================================
+   ZNOW QUICK-COMMERCE ECOSYSTEM - ULTRA PREMIUM STYLING
+   ========================================================= */
+
+/* Venture Navigation Pills */
+.nav-link-znow {
+    color: #f59e0b !important;
+    font-weight: 700 !important;
+    position: relative;
+}
+.nav-link-znow::after {
+    background-color: #f59e0b !important;
+}
+
+/* Znow Flagship Card */
+.prod-znow-card {
+    border: 1px solid rgba(245, 158, 11, 0.45) !important;
+    box-shadow: 0 0 35px rgba(245, 158, 11, 0.12), 0 20px 50px rgba(0, 0, 0, 0.5) !important;
+    background: linear-gradient(180deg, rgba(245, 158, 11, 0.04) 0%, rgba(17, 34, 64, 0.95) 100%) !important;
+    margin-bottom: 3rem;
+}
+
+.prod-znow-badge {
+    background: #f59e0b !important;
+    color: #070b12 !important;
+    font-weight: 800 !important;
+}
+
+.prod-znow-flag {
+    background: #d97706 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* Dual Mode Expansion Grid */
+.dualmode-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.dualmode-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: 12px;
+    padding: 1.25rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.dualmode-card:hover {
+    border-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.06);
+    transform: translateY(-2px);
+}
+
+.dualmode-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.badge-mode-a {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.badge-mode-b {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.dualmode-card h5 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin: 0.25rem 0 0.5rem 0;
+}
+
+.dualmode-card p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0 0 0.75rem 0;
+}
+
+.dualmode-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.dualmode-specs li {
+    padding: 4px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+}
+
+.dualmode-specs li span.spec-label {
+    color: #64748b;
+}
+
+.dualmode-specs li span.spec-val {
+    color: #f59e0b;
+    font-weight: 600;
+}
+
+/* Znow Visual Gallery */
+.znow-screens-scroll {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    margin: 1.25rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: #f59e0b rgba(255, 255, 255, 0.05);
+}
+
+.znow-screens-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+.znow-screens-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 9999px;
+}
+.znow-screens-scroll::-webkit-scrollbar-thumb {
+    background: #f59e0b;
+    border-radius: 9999px;
+}
+
+.znow-screen-item {
+    flex: 0 0 210px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    background: #0f172a;
+    position: relative;
+}
+
+.znow-screen-item:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: #f59e0b;
+    box-shadow: 0 12px 32px rgba(245, 158, 11, 0.25);
+}
+
+.znow-screen-item img {
+    width: 100%;
+    height: 380px;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+}
+
+.znow-screen-caption {
+    padding: 8px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: #f8fafc;
+    background: rgba(15, 23, 42, 0.95);
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subsystems Grid for Znow */
+.znow-subsystems-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.znow-subsystem-card {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    color: inherit;
+    text-decoration: none;
+}
+
+.znow-subsystem-card:hover {
+    border-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.06);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 16px rgba(245, 158, 11, 0.18);
+}
+
+.znow-icon-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.znow-role-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #fbbf24;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.znow-subsystem-card h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin: 0.75rem 0 0.4rem 0;
+}
+
+.znow-subsystem-card p {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    line-height: 1.45;
+    margin: 0 0 1rem 0;
+    flex-grow: 1;
+}
+
+.znow-launch-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #f59e0b;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.prod-btn-coffee {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+    color: #070b12 !important;
+    font-weight: 700 !important;
+    border: none !important;
+}
+
+.prod-btn-coffee:hover {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.5) !important;
+    transform: translateY(-2px);
+    color: #000 !important;
+}
+
+/* Native anchor offset for sticky header */
+#znow, #localkart, section {
+    scroll-margin-top: 90px;
+}
+
+@media (max-width: 1024px) {
+    .znow-subsystems-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .dualmode-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .znow-subsystems-grid {
+        grid-template-columns: 1fr;
+    }
+    .znow-screen-item {
+        flex: 0 0 170px;
+    }
+    .znow-screen-item img {
+        height: 300px;
+    }
+}
